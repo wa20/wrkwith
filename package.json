@@ -1,0 +1,27 @@
+{
+  "name": "wrkwith",
+  "version": "1.0.0",
+  "description": "Bipin",
+  "main": "server.js",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-github2": "^0.1.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wa20/wrkwith.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wa20/wrkwith/issues"
+  },
+  "homepage": "https://github.com/wa20/wrkwith#readme"
+}
