@@ -36,4 +36,6 @@ Collab.init (
         underscored: true,
         modelName: "collab"
     }
-)
+);
+
+module.exports= Collab
