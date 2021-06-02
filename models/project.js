@@ -1,9 +1,9 @@
-const { Model , DataTypes} = require ("sequelize")
+const { Model , DataTypes} = require("sequelize")
 const sequelize = require ("../config/connection")
 
 class Project extends Model {} 
 
-Project.init (
+Project.init(
     {
         id: {
             type: DataTypes.INTEGER,

@@ -1,7 +1,7 @@
-const User = require ("../models/user.js");
+const User = require("./user");
 
-const Project = require ("../models/project")
-const Collab = require ("../models/collab")
+const Project = require("./project")
+const Collab = require("./collab")
 
 
 Project.belongsTo(User,{
