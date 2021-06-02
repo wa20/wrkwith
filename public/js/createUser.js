@@ -14,16 +14,17 @@ signUP.addEventListener("click", async (event) => {
   }
 
   const firstNameVal = document.getElementById("firstName").value.trim();
-  const lasttNameVal = document.getElementById("lasttName").value.trim();
+  const lastNameVal = document.getElementById("lastName").value.trim();
   const emailVal = document.getElementById("emailSignUp").value.trim()
-  // username need to create
+  const userNameVal= document.getElementById("userName").value.trim()
 
   const submitNewUser = await fetch("/api/createUser", {
     method: "POST",
     body: JSON.stringify({
       firstName: firstNameVal,
-      lastName: lasttNameVal,
+      lastName: lastNameVal,
       email: emailVal,
+      userName: userNameVal,
       password: PWMain,
     }),
     headers: { "Content-Type": "application/json" },
