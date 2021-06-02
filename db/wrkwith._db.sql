@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS wrkwith_db;
+CREATE DATABASE wrkwith_db;
