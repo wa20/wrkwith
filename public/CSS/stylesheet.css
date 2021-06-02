@@ -58,6 +58,10 @@ html.ios body {
     background-size: cover;
   }
 
+  .sticky{
+    position: sticky;
+    top: 0;
+  }
 
 
   /* ==============================================
