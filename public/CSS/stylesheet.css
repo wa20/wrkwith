@@ -59,7 +59,7 @@ html.ios body {
   }
 
   .sticky{
-    position: sticky;
+    position: fixed;
     top: 0;
   }
 
