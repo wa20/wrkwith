@@ -11,10 +11,16 @@ router.use('/api', apiRoutes);
 //     res.render("login")
 // })
 
-
+//sign up body
 router.get('/', async (req, res) => {
   
     res.render('signUp')
+})
+
+//login body
+router.get('/login', async (req, res) => {
+  
+    res.render('login')
 })
 
 module.exports = router
