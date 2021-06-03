@@ -63,6 +63,23 @@ html.ios body {
     top: 0;
   }
 
+  /* ==============================================
+-  Body
+============================================== */ 
+
+
+  .navbar-scrolled{
+    background: transparent !important;
+    transition: 0.5s ease-in;
+  }
+
+  .navbar-dark{
+    background:inherit !important;
+    transition: 0.5s ease-in;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+    /* background: black; */
+  }
+
 
 /* ==============================================
 -  Body
