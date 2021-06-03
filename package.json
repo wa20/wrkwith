@@ -31,5 +31,6 @@
     "url": "https://github.com/wa20/wrkwith/issues"
   },
   "homepage": "https://github.com/wa20/wrkwith#readme",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {}
 }
