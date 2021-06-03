@@ -1,0 +1,24 @@
+<div class="ui link cards">
+  {{#each users as |user|}}
+  <div class="card">
+    <div class="image">
+      <img src="/images/avatar2/large/matthew.png">
+    </div>
+    <div class="content">
+      <div class="header">{{user_name}}</div>
+      <div class="meta">
+        <p> {{first_name}} {{last_name}}</p> 
+      </div>
+      <div class="description">
+        need to add this to the database !! 
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+       <a href="#"><button class="ui inverted red button">View Profile</button></a>
+      </span>
+     
+    </div>
+  </div>
+  {{/each}}
+</div>
