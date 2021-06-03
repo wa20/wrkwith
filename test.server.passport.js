@@ -2,8 +2,8 @@
 var passport = require('passport');
 var GitHubStrategy = require('passport-github2').Strategy;
 //for github passport
-var GITHUB_CLIENT_ID = "";
-var GITHUB_CLIENT_SECRET = "";
+var GITHUB_CLIENT_ID = " ";
+var GITHUB_CLIENT_SECRET = " ";
 // Passport session setup.
 //   Passport needs to be able to
 //   serialize users into and deserialize users out of the session.  Typically,
