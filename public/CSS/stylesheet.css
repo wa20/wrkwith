@@ -68,14 +68,13 @@ html.ios body {
 -  Body
 ============================================== */
 
-.innerbody{
-  /* height: 100vh;
-  width: 100vw; */
+.signupbox, .loginbox{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 
 
 /* ==============================================
@@ -86,9 +85,13 @@ html.ios body {
   .signUP{
     
     width: 70vw;
-    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.767);
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
   }
 
+  .logIn{
+    width: 70vw;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  }
 
 
 

@@ -11,8 +11,15 @@ router.use('/api', apiRoutes);
 //     res.render("login")
 // })
 
-//sign up body
+//homepage 
 router.get('/', async (req, res) => {
+  
+    res.render('homepage')
+})
+
+
+//sign up body
+router.get('/signup', async (req, res) => {
   
     res.render('signUp')
 })
