@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Collab extends Model {}
 
-Collab.init (
+Collab.init(
     {
         id:{
             type:DataTypes.INTEGER,
@@ -15,7 +15,7 @@ Collab.init (
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model:"projec",
+                model:"project",
                 key: "id"
             }
 
@@ -38,4 +38,4 @@ Collab.init (
     }
 );
 
-module.exports= Collab
+module.exports = Collab

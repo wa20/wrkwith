@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 
-router.post("/" , async (req,res)=>{
+router.post("/signup" , async (req,res)=>{
     try{
         const newuser=await User.create({
             user_name: req.body.userName,
@@ -16,3 +16,15 @@ router.post("/" , async (req,res)=>{
         res.status(500).json(err)
     }
 })
+
+router.get("/community", async (req,res) => {
+    try {
+        const userdata= await User.findAll();
+        const users = userdata.map((user)=>user.get({plain:true}));
+        res.render("community",{users});
+    } catch(err){
+        console.log("we hit this error here" + err)
+    }
+})
+
+module.exports = router

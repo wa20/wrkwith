@@ -1,11 +1,11 @@
 const { Model , DataTypes} = require ("sequelize")
-const sequelize = require ("../config/connection")
-const bcrypt = require = ("bcrypt")
+const sequelize = require("../config/connection")
+const bcrypt = require("bcrypt")
 
 
 class User extends Model {}
 
-User.init () (
+User.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -43,7 +43,8 @@ User.init () (
         sequelize,
         timestamps: false,
         underscored: true,
-        modelName: "user"
+        modelName: "user",
+        freezeTableName: true
     }
 )
 
