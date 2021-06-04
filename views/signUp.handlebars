@@ -1,54 +1,60 @@
- <section class="section is-medium  signupbox">
- <div class="box title is-4 has-text-centered signUP">
-            <!-- <i class="fas fa-sign-in-alt"></i> -->
-             Create Account
-</div>
+{{>loggedOutMiniHero}}
+{{!-- page template top half end --}}
  
- <form class="box signUP">
+ 
+ <section class="section is-medium">
+ 
+ <div class="ui attached inverted message box">
+  <div class="header">
+    Create Account
+  </div>
+  <p>Fill out the form below to sign-up for a new account</p>
+</div>
+<form class="ui form attached fluid segment signUP">
+  <div class="two fields">
+    <div class="field">
+      <label>First Name</label>
+      <input placeholder="First Name" type="text" id="firstName">
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input placeholder="Last Name" type="text" id="lastName">
+    </div>
+  </div>
+  <div class="field">
+    <label>Username</label>
+    <input placeholder="Username" type="text" id="userName">
+  </div>
+  <div class="field">
+    <label>Email</label>
+    <input placeholder="Email" type="email" id="emailSignUp">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" placeholder="********" id="PWMain">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" placeholder="********" id="PWCheck">
+  </div>
 
-              <div class="field">
-                <label class="label">First Name</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Joe" id="firstName">     
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Last Name</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Bloggs" id="lastName">       
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Create User Name</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="create user name" id="userName">       
-                </div>
-              </div>
-              <div class="field">
-                  <label class="label">Email</label>
-                  <div class="control">
-                    <input class="input" type="email" placeholder="e.g. name@example.com" id="emailSignUp">       
-                  </div>
-              </div>
-              
-              <div class="field">
-                  <label class="label">Password</label>
-                  <div class="control">
-                    <input class="input" type="password" placeholder="********" id="PWMain">
-                  </div>
-              </div>
-    
-              <div class="field">
-                <label class="label">Re-Enter Password</label>
-                <div class="control">
-                  <input class="input" type="password" placeholder="********" id="PWCheck">
-                </div>
-            </div>
-            
-              
-                <button class="button has-background-success-dark has-text-white" id="creatAccount">Create Account</button>
-               
-        </form>
+  {{!-- <div class="inline field">
+    <div class="ui checkbox">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree to the terms and conditions</label>
+    </div>
+  </div> --}}
+  <div class="ui red submit button">Create Account</div>
+</form>
+<div class="ui bottom attached warning message">
+  <i class="icon help"></i>
+  Already signed up? <a href="#">Login here</a> instead.
+</div>
+  
 </section>
 
-<script src="js/createUser.js"
+
+{{!-- page template base end --}}
+</section>
+
+<script src="js/createUser.js"></script>

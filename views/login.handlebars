@@ -1,24 +1,35 @@
-<section class="section is-medium loginbox">
-  <div class="box title is-4 has-text-centered logIn">
-            <i class="fas fa-sign-in-alt"></i>
-             Log In Below
-    </div>
-    <form class="box logIn is-justify-content-center is-align-content-center">
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
-                <input class="input" type="email" placeholder="e.g. name@example.com" id="logInEmail">      
-              </div>
-            </div>
-          
-            <div class="field">
-              <label class="label">Password</label>
-              <div class="control">
-                <input class="input" type="password" placeholder="********" id="logInPassword">
-              </div>
-            </div>
-          
-            <button class="button is-danger" id="LogIn">Sign in</button>
-    </form>
+
+{{>loggedOut}}
+{{!-- page template top half end --}}
+
+
+<section class="section is-medium ">
+ 
+ <div class="ui attached inverted message box">
+  <div class="header orange">
+    Login Below
+  </div>
+  {{!-- <p>Fill out the form below to sign-up for a new account</p> --}}
+</div>
+<form class="ui form attached fluid segment signUP">
+  <div class="field">
+    <label>Username</label>
+    <input placeholder="Username" type="text" id="loginUsername">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" placeholder="********" id="LoginPassword">
+  </div>
+  <div class="ui red submit button">Login</div>
+</form>
+{{!-- <div class="ui bottom attached warning message">
+  <i class="icon help"></i>
+  Already signed up? <a href="#">Login here</a> instead.
+</div> --}}
+  
 </section>
-    {{!-- <script src=".js/createUser.js" --}}
+
+
+{{!-- page template base end --}}
+
+  

@@ -26,4 +26,35 @@ router.get("/community", async (req, res) => {
   }
 });
 
+router.get("/community", async (req, res) => {
+  try {
+    const userdata = await User.findAll();
+    const users = userdata.map((user) => user.get({ plain: true }));
+    res.render("community", { users });
+  } catch (err) {
+    console.log("we hit this error here" + err);
+  }
+});
+
+router.get("/community", async (req, res) => {
+  try {
+    const userdata = await User.findAll();
+    const users = userdata.map((user) => user.get({ plain: true }));
+    res.render("community", { users });
+  } catch (err) {
+    console.log("we hit this error here" + err);
+  }
+});
+
+//Profile page
+router.get("/profile", async (req, res) => {
+  try {
+    const userdata = await User.findByPk();
+    const users = userdata.map((user) => user.get({ plain: true }));
+    res.render("profilepage", { users });
+  } catch (err) {
+    console.log("we hit this error here" + err);
+  }
+});
+
 module.exports = router;
