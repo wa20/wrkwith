@@ -1,0 +1,56 @@
+{{>loggedIn}}
+
+{{!-- <h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp Profile
+</h2> --}}
+
+<section class="section is-small is-flex is-justify-content-center">
+ <div class="ui divided items">
+  <div class="item">
+    <div class="image">
+      <img class="ui medium circular image" src="/assets/male_avatar.svg">
+    </div>
+    <div class="content">
+      <a class="header">{{first_name}} {{last_name}}</a> 
+      <div class="meta">
+        <span class="">Joined On:{{date}}</span>
+      </div>
+      <div class="description">
+        <p> <b>Username:</b>{{user_name}}</p>
+        <p> <b>Email:</b>{{email}}</p>
+        <p> <b>Bio:</b> </p>{{bioinput}}</p>
+      </div>
+      <div class="mt-4">
+        <button class="button is-dark"><i class="fas fa-edit"></i>&nbsp Edit Account</button>
+        <button class="button is-dark"><i class="fas fa-trash-alt"></i></i>&nbsp Delete Account</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp My Projects
+</h2>
+
+<section class="section is-medium is-flex is-justify-content-center is-align-content-center">
+{{!-- <h1 class="title">My Projects</h1> --}}
+ <button class="button is-large is-light">
+     Add A New Project   &nbsp &nbsp
+     <i class="fas fa-plus-square"></i>
+</button>
+
+</section>
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-handshake"></i>
+  &nbsp My Collaborations
+</h2>
+<section class="section is-medium is-flex is-justify-content-center is-align-content-center">
+
+     <button class="button is-large is-light">
+     Contribute To A Project  &nbsp &nbsp
+     <i class="fas fa-plus-square"></i>
+ 
+</section>
