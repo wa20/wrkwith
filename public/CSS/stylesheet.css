@@ -59,7 +59,7 @@ html.ios body {
   }
 
   .sticky{
-    position: sticky;
+    position: fixed;
     top: 0;
   }
 
@@ -102,4 +102,9 @@ html.ios body {
 .footer{
   position: relative;
   bottom: 0;
+}
+
+#with{
+  font-style: italic;
+  color: coral;
 }
