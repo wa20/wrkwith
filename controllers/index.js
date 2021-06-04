@@ -30,4 +30,10 @@ router.get('/login', async (req, res) => {
     res.render('login')
 })
 
+//community page
+router.get('/community', async (req, res) => {
+  
+    res.render('community')
+})
+
 module.exports = router
