@@ -36,4 +36,11 @@ router.get('/community', async (req, res) => {
     res.render('community')
 })
 
+//profile page
+router.get('/profile', async (req, res) => {
+  
+    res.render('profilepage')
+})
+
+
 module.exports = router

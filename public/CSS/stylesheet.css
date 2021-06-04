@@ -90,6 +90,15 @@ html.ios body {
 /* ==============================================
 -  Body
 ============================================== */
+.homePageContainer{
+display: flex;
+/* align-items: stretch;
+flex-direction: row; */
+width: 100vw;
+}
+
+
+
 
 .signupbox, .loginbox{
   display: flex;
