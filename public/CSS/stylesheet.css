@@ -1,3 +1,9 @@
+:root{
+--color1: ;
+--color2: ;
+}
+
+
 * {
     /* all:unset; */
     margin: 0;
@@ -74,7 +80,7 @@ html.ios body {
   }
 
   .navbar-dark{
-    background:inherit !important;
+    background:rgb(46, 45, 45) !important;
     transition: 0.5s ease-in;
     box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
     /* background: black; */
