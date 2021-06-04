@@ -37,6 +37,19 @@ User.init(
         last_name:{
             type:DataTypes.STRING,
             allowNull:true
+        },
+        date_joined:{
+            type:"TIMESTAMP",
+            defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
+            allowNull:false
+        },
+        bio:{
+            type:DataTypes.TEXT,
+            allowNull:true
+        },
+        avatar:{
+            type:DataTypes.STRING,
+            allowNull:true
         }
     },
     {
