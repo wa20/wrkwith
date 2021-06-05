@@ -74,10 +74,7 @@ html.ios body {
 ============================================== */ 
 
 
-  .navbar-scrolled{
-    background: transparent !important;
-    transition: 0.5s ease-in;
-  }
+ 
 
   .navbar-dark{
     background:rgb(46, 45, 45) !important;
@@ -86,11 +83,11 @@ html.ios body {
     /* background: black; */
   }
 
-#communityimmage{
-  height: 300px;
-  width:300px
-  
-}
+  .navbar-scrolled{
+    background: transparent !important;
+    transition: 0.5s ease-in;
+  }
+
 
 /* ==============================================
 -  Body
