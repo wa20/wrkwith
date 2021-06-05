@@ -31,8 +31,8 @@ signUP.addEventListener("click", async (event) => {
   });
 
   if (submitNewUser.ok) {
-    //redirect to homepage
-    document.location.replace("/dashboard")
+    //redirect to profile
+    document.location.replace("/profile")
   } else {
     alert("Sign Up Failed");
   }

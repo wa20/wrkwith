@@ -1,8 +1,17 @@
+
+
+{{>loggedIn}}
+
 <div class="ui link cards">
   {{#each users as |user|}}
   <div class="card">
     <div class="image">
-      <img src="/images/avatar2/large/matthew.png">
+      {{#if avatar}}
+      <img  src="{{avatar}}">
+      {{else}}
+     <img  src="/assets/avatars/avatar1.jpg">
+      {{/if}}
+      
     </div>
     <div class="content">
       <div class="header">{{user_name}}</div>
@@ -10,7 +19,7 @@
         <p> {{first_name}} {{last_name}}</p> 
       </div>
       <div class="description">
-        need to add this to the database !! 
+        <P>{{bio}}</P>
       </div>
     </div>
     <div class="extra content">
@@ -24,4 +33,4 @@
 </div>
 
 
-<script src="../seeds/userseed.js"
+

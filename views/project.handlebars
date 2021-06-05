@@ -1,6 +1,12 @@
+{{>loggedIn}}
+<section class="section is-medium">
 <div class="ui link cards">
   {{#each projects as |project|}}
+<<<<<<< HEAD
   <a href="/api/project/projects/">
+=======
+  <a href="/api/project/projects/{{id}}">
+>>>>>>> b8e9488b8b9b627a1729ba2e755917e39998b290
 
   <div class="card">
     <div class="content">
@@ -17,3 +23,4 @@
     </a>
   {{/each}}
 </div>
+</section>
