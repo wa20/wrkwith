@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const { User } = require('../../models');
 
@@ -79,16 +80,14 @@ router.get("/community", async (req,res) => {
 
 
 //Profile page
-router.get("/profile", async (req,res) => {
-    try {
-        const userdata = await User.findByPk();
-        const users = userdata.map((user)=> user.get({plain:true}));
-        res.render("profilepage",{users});
-    } catch(err){
-        console.log("we hit this error here" + err)
-    }
-})
+router.get("/profile", async (req, res) => {
+  try {
+    const userdata = await User.findByPk();
+    const users = userdata.map((user) => user.get({ plain: true }));
+    res.render("profilepage", { users });
+  } catch (err) {
+    console.log("we hit this error here" + err);
+  }
+});
 
-
-module.exports = router
-
+module.exports = router;
