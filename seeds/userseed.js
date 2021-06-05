@@ -8,7 +8,8 @@ const userData = [
         first_name:"harith",
         last_name:"albadry",
         password:"1234", 
-        bio:" full stack web dev in the making"
+        bio:" full stack web dev in the making",
+        
     },
     {
         user_name:"bipin",
@@ -16,7 +17,8 @@ const userData = [
         first_name:"bipin",
         last_name:"sorry dont know!",
         password:"1234",
-        bio:" full stack web dev in the making 2"
+        bio:" full stack web dev in the making 2",
+        avatar:"/assets/avatars/avatar2.jpg"
     },
     {
         user_name:"andrea",
@@ -24,7 +26,9 @@ const userData = [
         last_name:"bsomething ?",
         email:"a2@email.com",
         password:"1234",
-        bio:" full stack web dev in the making 3"
+        bio:" full stack web dev in the making 3",
+        
+        
     },
     {
         user_name:"wael",
@@ -32,7 +36,8 @@ const userData = [
         last_name:"ahmed",
         email:"w2@email.com",
         password:"1234",
-        bio:" full stack web dev in the making 4"
+        bio:" full stack web dev in the making 4",
+        avatar:"/assets/avatars/avatar3.jpg"
     }
 ]
 
