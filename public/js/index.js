@@ -1,3 +1,3 @@
-$('.ui.basic.modal')
-  .modal('show')
-;
+// $('.ui.basic.modal')
+//   .modal('show')
+// ;
