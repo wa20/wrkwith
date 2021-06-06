@@ -100,7 +100,7 @@ router.post("/upload", (req, res) =>{
         return res.status(400).send('no files were uploaded');
     }
 samplefile=req.files.samplefile;
-uploadpath= "__dirname:../../public/assets/avatars"+samplefile.name;
+uploadpath= "__dirname:../../public/assets/avatars/"+samplefile.name;
 console.log(samplefile)
 console.log(" the uplod path is :::" + uploadpath)
 
@@ -111,7 +111,7 @@ samplefile.mv(uploadpath,  async function(err){
 console.log("this is the sample file  :::" + samplefile.name)
     const uploadimage = await User.update({avatar: samplefile.name}, {
         where:{
-            id:1
+            id:2
         }
     });
     if (!uploadimage){
