@@ -1,20 +1,22 @@
-const Login = document.getElementById("loginUser")
+const loginEl = document.getElementById("loginUser")
 
-Login.addEventListener("click", async (event)=>{
 
+
+loginEl.addEventListener("click", async (event)=>{
+console.log("trying to log in")
     event.preventDefault();
 
 
-    const Username = document.getElementById("loginUsername").value.trim();
-    const Password = document.getElementById("loginPassword").value.trim();
+    const usernameEl = document.getElementById("loginUsername").value.trim();
+    const passwordEl = document.getElementById("loginPassword").value.trim();
 
-    if (Username && Password) {
+    if (usernameEl && passwordEl) {
 
         const response = await fetch ('/api/user/login', {
             method: 'POST',
             body: JSON.stringify({
-                userName: Username,
-                password: Password,
+                username: usernameEl,
+                password: passwordEl,
             }),
             headers: {'Content-Type': 'application/json'},
         });
