@@ -74,20 +74,27 @@ html.ios body {
 ============================================== */ 
 
 
- 
-
-  .navbar-dark{
+  /* .navbar{
     background:rgb(46, 45, 45) !important;
     transition: 0.5s ease-in;
     box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
-    /* background: black; */
-  }
+  } */
 
-  .navbar-scrolled{
+  /* .navbar-scrolled{
     background: transparent !important;
     transition: 0.5s ease-in;
-  }
+  } */
+  
+  /* nav {
+    background: transparent !important;
+    transition: background-color 0.4s ease-out;
+  } */
 
+  nav {
+    background:rgb(46, 45, 45) !important;
+    transition: 0.5s ease-in;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  }
 
 /* ==============================================
 -  Body
