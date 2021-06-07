@@ -1,13 +1,30 @@
-<div class="ui link cards">
-  {{#each projects as |project|}}
-  <div class="card">
-    <div class="content">
-
-      <div class="header">{{project.title}}</div>
-
-     </div> 
- 
+{{>loggedIn}}
+<section>
+  <div>
+    <h2>{{title}}</h2>
+    <p>created by {{user.user_name}}</p>
+    <p>on {{format_date date_created}}</p>
   </div>
-    </div>
-  {{/each}}
-</div>
+  <div>
+    <img src="/assets/avatar/{{user.avatar}}">
+  </div>
+
+  
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp Project details
+</h2>
+<P>{{details}}</P>
+<P> technology used: {{tech}}</P>
+
+</section>
+<section>
+  <h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp Collaborators
+</h2>
+{{#each collabs as |collab|}}
+<P> name:{{collab.user.user_name}}</P>
+<img src="/assets/avatars/{{collab.user.avatar}}"
+{{/each}}
+</section>
