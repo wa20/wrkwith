@@ -1,7 +1,3 @@
-// $('.ui.sidebar')
-//   .sidebar('toggle')
-// ;
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements

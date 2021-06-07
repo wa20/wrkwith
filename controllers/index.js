@@ -51,7 +51,31 @@ router.get('/profile', withAuth, async (req, res) => {
   });
 
 
+
+  //edit profile page
+  router.get('/editaccount', async (req, res) => {
+    res.render('profileEditDetails')
+  })
+
+  //edit profile image page
+  router.get('/editimage', async (req, res) => {
+    res.render('profileEditImage')
+  })
+
+//logout
+  router.get('/login', (req, res) => {
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('login');
+  });
+
+//upload function
   router.get("/upload", async(req,res)=>{
     res.render("upload")
 })
+
 module.exports = router
