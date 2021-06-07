@@ -51,6 +51,7 @@ router.get('/profile', withAuth, async (req, res) => {
   });
 
 
+
   //edit profile page
   router.get('/editaccount', async (req, res) => {
     res.render('profileEditDetails')
@@ -71,5 +72,10 @@ router.get('/profile', withAuth, async (req, res) => {
   
     res.render('login');
   });
+
+//upload function
+  router.get("/upload", async(req,res)=>{
+    res.render("upload")
+})
 
 module.exports = router
