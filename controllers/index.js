@@ -50,4 +50,8 @@ router.get('/profile', withAuth, async (req, res) => {
     }
   });
 
+
+  router.get("/upload", async(req,res)=>{
+    res.render("upload")
+})
 module.exports = router

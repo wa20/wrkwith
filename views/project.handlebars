@@ -1,23 +1,30 @@
 {{>loggedIn}}
-<section class="section is-medium">
-<div class="ui link cards">
-  {{#each projects as |project|}}
-  <a href="/api/project/projects/">
 
-  <div class="card">
-    <div class="content">
-      <div class="header">{{title}}</div>
-      <div class="meta">
-        <p> {{details}}</p> 
-      </div>
-      <div class="description">
-        need to add this to the database !! 
-      </div>
-    </div>
- //needs name, technology, 
- //EAch card links to project page, - everything on database 
-   </div>
-    </a>
-  {{/each}}
-</div>
-</section>
+
+<table class="table">
+<table is-bordered "table" </table>  
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>details</th>
+      <th>tech</th>
+      <th>date_created</th>
+      <th>creator</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    {{#each projects as |project|}}
+    <tr>
+      <th>{{id}}</th>
+      <td>{{title}}</td>
+      <td>{{details}}</td>
+      <td>{{tech}}</td>
+      <td>{{date_created}}</td>
+      <td>{{creator}}</td>
+    </tr>
+ {{/each}}
+  </tbody>
+</table>
+

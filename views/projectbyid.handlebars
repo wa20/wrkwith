@@ -1,13 +1,19 @@
 <div class="ui link cards">
   {{#each projects as |project|}}
-  <div class="card">
+ 
     <div class="content">
 
       <div class="header">{{project.title}}</div>
-//all the information from the DB plus collaborators and creator
+//all the information from the DB plus collaborators and creator 
+      <div class="content">{{project.details}}</div>
+      <div class="content">{{project.tech}}</div>
+      <div class="content">{{project.date_created}}</div>
+      <div class="content">{{project.creator}}</div>
+      <div class="content">{{project.created_at}}</div>
+      <div class=
      </div> 
  
-  </div>
+
     </div>
   {{/each}}
 c1</div>

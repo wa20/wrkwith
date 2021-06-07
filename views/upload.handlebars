@@ -1,0 +1,10 @@
+{{!-- simple upload form to test upload function --}}
+
+
+{{>loggedIn}}
+
+<form action="/api/user/upload" method="POST" encType="multipart/form-data">
+  <h3>Upload Profile Photo</h3>
+  <input type="file" name="samplefile" accept="image/*" />
+  <input type="submit" class="btn btn-primary">
+</form>
