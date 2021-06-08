@@ -8,6 +8,7 @@ const allProjects = require("./allprojects");
 const homeRoute = require("./homepage")
 const signupRoute = require("./signup")
 const loginRoute = require("./login")
+const newprojectroute= require("./newproject")
 
 router.use("/community", communityRoute);
 router.use("/logout", logoutRoute);
@@ -17,6 +18,7 @@ router.use("/projects",allProjects);
 router.use("/homepage",homeRoute);
 router.use("/signup", signupRoute);
 router.use("/login" , loginRoute);
+router.use("/newproject", newprojectroute)
 
 
 module.exports = router
