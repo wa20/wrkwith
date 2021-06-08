@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Project,User, Collab } = require("../../models");
 
 
-// find all projects 
+ // find all projects 
 router.get("/", async (req, res) => {
     try {
       const projectdata = await Project.findAll();
@@ -11,6 +11,6 @@ router.get("/", async (req, res) => {
     } catch (err) {
       console.log("we hit this error here" + err);
     }
-  });
+ });
 
   module.exports = router;

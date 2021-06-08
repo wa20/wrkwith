@@ -1,0 +1,35 @@
+{{>loggedIn}}
+
+<section class="section is-medium">
+{{#each projects as |project|}}
+
+  <div class="ui cards">
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="{{projects}}">
+      <div class="header">
+        {{project.title}}
+      </div>
+      <div class="meta">
+        created by: {{username}}
+      </div>
+     <div class="meta">
+        date: {{date}}
+      </div>
+
+      <div class="description">
+       click below to view project
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <a href="/html/projectfindone/{{project.id}}" class="ui basic green button">View project</div>
+      </div>
+    </div>
+  </div>
+
+{{/each}}
+
+
+
+</section>
