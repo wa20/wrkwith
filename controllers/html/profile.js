@@ -4,7 +4,7 @@ const withAuth = require("../../utils/auth")
 
 //Profile page
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findOne({where: {id: req.session.user_id}});

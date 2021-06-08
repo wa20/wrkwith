@@ -12,7 +12,7 @@ console.log("trying to log in")
 
     if (usernameEl && passwordEl) {
 
-        const response = await fetch ('/api/user/login', {
+        const response = await fetch ('/api/user/create/login', {
             method: 'POST',
             body: JSON.stringify({
                 username: usernameEl,
@@ -22,7 +22,7 @@ console.log("trying to log in")
         });
 
         if(response.ok){
-            document.location.replace('/profile');
+            document.location.replace('/html/profile');
         } else {
             alert(response.statusText)
         }
