@@ -1,9 +1,10 @@
-const router = require("express").Router();
+const router = require ("express").Router();
 const { Project,User, Collab } = require("../../models");
 
 
+
 // find one project by id 
-router.get("/projects/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     var id = req.params.id;
     const projectdata = await Project.findByPk(id, {
@@ -31,16 +32,4 @@ router.get("/projects/:id", async (req, res) => {
 });
 
 
-
-// find all projects 
-router.get("/projects", async (req, res) => {
-  try {
-    const projectdata = await Project.findAll();
-    const projects = projectdata.map((project) => project.get());
-    res.render("project", { projects });
-  } catch (err) {
-    console.log("we hit this error here" + err);
-  }
-});
-
-module.exports = router;
+module.exports = router 

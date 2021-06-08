@@ -1,9 +1,8 @@
-
 const router = require('express').Router();
-const { User } = require('../../models');
-const fileUpload = require ("express-fileupload");
+const { User } = require('../../../models');
 
 
+// create new user 
 router.post("/signup" , async (req,res)=>{
     try{
         const newuser=await User.create({
@@ -19,7 +18,7 @@ router.post("/signup" , async (req,res)=>{
     }
 })
 
-//login function
+// login user
 router.post('/login', async (req, res) =>{
 
    
@@ -63,45 +62,6 @@ router.post('/login', async (req, res) =>{
 
 });
 
-//logout function 
-
-router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
-      req.session.destroy(() => {
-        res.status(204).end();
-      });
-    } else {
-      res.status(404).end();
-    }
-  });
-
-
-
-//community page
-router.get("/community", async (req,res) => {
-    try {
-        const userdata= await User.findAll();
-        const users = userdata.map((user)=>user.get({plain:true}));
-        res.render("community",{users});
-    } catch(err){
-        console.log("we hit this error here" + err)
-    }
-})
-
-
-
-
-//Profile page
-router.get("/profile", async (req, res) => {
-  try {
-    const userdata = await User.findByPk();
-    const users = userdata.map((user) => user.get({ plain: true }));
-    res.render("profilepage", { users });
-  } catch (err) {
-    console.log("we hit this error here" + err);
-  }
-});
-
 // to upload an image to the db
 
 router.post("/upload", (req, res) =>{
@@ -136,4 +96,6 @@ console.log("this is the sample file  :::" + samplefile.name)
 })
 
 
-module.exports = router;
+
+
+module.exports = router 

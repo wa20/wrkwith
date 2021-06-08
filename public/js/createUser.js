@@ -18,7 +18,7 @@ signUP.addEventListener("click", async (event) => {
   const emailVal = document.getElementById("emailSignUp").value.trim()
   const userNameVal= document.getElementById("userName").value.trim()
 
-  const submitNewUser = await fetch("/api/user/signup", {
+  const submitNewUser = await fetch("/api/user/create/signup", {
     method: "POST",
     body: JSON.stringify({
       firstName: firstNameVal,
