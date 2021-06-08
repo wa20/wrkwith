@@ -1,0 +1,58 @@
+{{>loggedInNoHero}}
+
+<section class="section is-medium">
+
+{{!-- <div class="ui top attached tabular menu">
+  <a href="/editaccount" class="item active" data-tab="first">Edit Profile</a>
+  <a href="/editimage" class="item" data-tab="second">Edit Profile Image</a>
+</div> --}}
+
+<div class="ui bottom attached segment">
+  <div class="ui attached inverted message box">
+    <div class="header">Creat New Project</div>
+    <p>Fill out the form below to sign-up for a new account</p>
+  </div>
+  <form class="ui form attached fluid segment signUP">
+  {{!--first and last name field--}}
+    <div class="two fields">
+      <div class="field">
+        <label>First Name</label>
+        <input placeholder="{{first_name}}" type="text" id="firstNameEdit">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input placeholder="{{last_name}}" type="text" id="lastNameEdit">
+      </div>
+    </div>
+  {{!-- username and email field --}}
+    <div class="two fields">
+    <div class="field">
+      <label>Username</label>
+      <input placeholder="{{username}}" type="text" id="usernameEdit">
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input placeholder="{{email}}" type="email" id="emailEdit">
+    </div>
+    </div>
+
+    <div class="field">
+      <label>Bio</label>
+      <textarea placeholder="Update Bio..." id="bioEdit"></textarea>
+    </div>
+    
+  {{!-- add langauge section --}}
+    
+
+    <div class="ui red submit button">Submit changes</div>
+    <div class="ui grey submit button mt-3">Cancel changes</div>
+  </form>
+  <div class="ui bottom attached warning message">
+    <i class="fas fa-user-circle"></i>
+    &nbsp Amend profile image <a href="/editimage"><b>Click Here</b></a> instead.
+</div>
+
+</div>
+
+
+</section>
