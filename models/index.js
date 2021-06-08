@@ -18,6 +18,18 @@ Collab.belongsTo(Project,{
     onDelete:"CASCADE"
 })
 
+Project.hasMany(Collab,{
+    foreignKey:"project_id"
+});
+
+User.hasMany(Collab,{
+    foreignKey:"user_id",
+});
+
+Collab.belongsTo(User,{
+    foreignKey:"user_id",
+    onDelete:"CASCADE"
+});
 
 module.exports={
     User,
