@@ -71,8 +71,8 @@ router.post("/upload", (req, res) =>{
     if (!req.files) {
         return res.status(400).send('no files were uploaded');
     }
-samplefile=req.files.samplefile;
-uploadpath= "__dirname:../../public/assets/avatars/"+samplefile.name;
+samplefile =req.files.samplefile;
+uploadpath = "__dirname:../../public/assets/avatars/"+samplefile.name;
 console.log(samplefile)
 console.log(" the uplod path is :::" + uploadpath)
 
