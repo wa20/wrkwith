@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../../models');
 const withAuth = require('../../../utils/auth');
 
-
+//TODO: fix delete function
 router.delete('/:id', withAuth, async (req, res) => {
     
     try{
