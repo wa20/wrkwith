@@ -8,6 +8,7 @@ const { parse } = require('dotenv');
 // creating a new project 
 
 router.post("/new", withAuth, async (req,res)=>{
+
     try{
         console.log("///////////////////////////////////////////NEW PROJECT")
         console.log("user id is" + req.session.user_id)

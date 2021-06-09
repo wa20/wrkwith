@@ -22,19 +22,22 @@ if (PWMain !== PWTwo) {
     const BioEl = document.getElementById("bioEdit").value.trim();
 
 
-const submitChange = await fetch("/api/user/update/profile-edit", {
+const fetchOptions = {
+  method: "PUT",
+  body: JSON.stringify({
+      firstName: firstNameEl,
+      lastName: lastNameEl,
+      email: emailEl,
+      userName: usernameEl,
+      password: PWMain.length > 0 && PWMain, //TODO: ensure it does not take an empty string for a password
+      bio: BioEl,
+  }),
+  headers: { "Content-Type": "application/json" },
+}
 
-    method: "PUT",
-    body: JSON.stringify({
-        firstName: firstNameEl,
-        lastName: lastNameEl,
-        email: emailEl,
-        userName: usernameEl,
-        password: PWMain,
-        bio: BioEl,
-    }),
-    headers: { "Content-Type": "application/json" },
-});
+const submitChange = await fetch("/api/user/update", fetchOptions);
+
+console.log(submitChange)
 
 if (submitChange.ok) {
     //redirect to profile
