@@ -11,6 +11,7 @@ createProject.addEventListener("click", async(event) =>{
     const details = document.getElementById("details").value.trim();
     
 
+
     const newProject = await fetch("/api/project/create/new", {
         method: "POST",
         body: JSON.stringify({
@@ -18,7 +19,7 @@ createProject.addEventListener("click", async(event) =>{
             technology: technology,
             details: details,
         }),
-        Headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
     });
 
     if (newProject.ok) {
