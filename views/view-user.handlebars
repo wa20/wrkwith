@@ -1,0 +1,77 @@
+{{>loggedIn}}
+
+
+<section class="section is-small is-flex is-justify-content-center">
+ <div class="ui divided items">
+  <div class="item">
+    <div class="image">
+      <img class="ui medium circular image" src="/assets/male_avatar.svg">
+    </div>
+    <div class="content">
+      <a class="header">{{user.first_name}} {{user.last_name}}</a> 
+      <div class="meta">
+        <span class="">Joined On:{{date}}</span>
+      </div>
+      <div class="description">
+        <p> <b>Username:</b>{{user.user_name}}</p>
+        <p> <b>Email:</b>{{user.email}}</p>
+        <p> <b>Bio:</b> </p>{{user. bio}}</p>
+      </div>
+      <div class="mt-4">
+        <a href="/html/profile-edit" class="button is-dark"><i class="fas fa-edit"></i>&nbsp Edit Account</a>
+        <button class="button is-dark"><i class="fas fa-trash-alt"></i></i>&nbsp Delete Account</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp {{username_id}} Projects
+</h2>
+
+
+
+<section class="section is-medium is-flex is-justify-content-center is-align-content-center">
+
+{{#each projects as |project|}}
+<div class="ui cards">
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        Elliot Fu
+      </div>
+      <div class="meta">
+        Friends of Veronika
+      </div>
+      <div class="description">
+        Elliot requested permission to view your contact details
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <div class="ui basic green button">Approve</div>
+        <div class="ui basic red button">Decline</div>
+      </div>
+    </div>
+  </div>
+
+{{/each}}
+
+</section>
+
+
+
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-handshake"></i>
+  &nbsp My Collaborations
+</h2>
+<section class="section is-medium is-flex is-justify-content-center is-align-content-center">
+
+     <button class="button is-large is-light">
+     Contribute To A Project  &nbsp &nbsp
+     <i class="fas fa-plus-square"></i>
+ 
+</section>

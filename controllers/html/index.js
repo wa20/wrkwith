@@ -10,7 +10,8 @@ const allProjects = require("./allprojects");
 const homeRoute = require("./homepage")
 const signupRoute = require("./signup")
 const loginRoute = require("./login")
-const newprojectroute= require("./newproject")
+const newprojectroute = require("./newproject")
+// const viewUserRoute = require("./view-user")
 
 
 
@@ -26,6 +27,7 @@ router.use("/homepage",homeRoute);
 router.use("/signup", signupRoute);
 router.use("/login" , loginRoute);
 router.use("/newproject", newprojectroute)
+// router.use("/view-user", viewUserRoute )
 
 
 module.exports = router
