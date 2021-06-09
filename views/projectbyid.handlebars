@@ -1,13 +1,23 @@
 {{>loggedIn}}
 <section>
-  <div>
-    <h2>{{title}}</h2>
-    <p>created by {{user.user_name}}</p>
-    <p>on {{format_date date_created}}</p>
+  <div class="row">
+   <div>
+      <h2 class="ui huge header left aligned">{{title}}</h2>
+      
+        <h2 class="ui header">
+      <img src="/assets/avatars/male_avatar.svg" class="ui circular image">
+      {{user.user_name}}
+    </h2>
+        <p class="section_title">created on: <span class="user_text">{{format_date date_created}}</span></p>
+         </div>
+         <div>
+       
+  <div class="ui red submit button" data-id="{{id}}" id="collaborate">WRK with</div>
+         </div>
   </div>
-  <div>
+  {{!-- <div>
     <img src="/assets/avatar/{{user.avatar}}">
-  </div>
+  </div> --}}
 
   
 <h2 class="ui horizontal divider header">
@@ -23,8 +33,16 @@
   <i class="fas fa-tasks"></i>
   &nbsp Collaborators
 </h2>
-{{#each collabs as |collab|}}
-<P> name:{{collab.user.user_name}}</P>
-<img src="/assets/avatars/{{collab.user.avatar}}"
-{{/each}}
+
+<div class="row">
+  {{#each collabs as |collab|}}
+  {{!-- <P> name:{{collab.user.user_name}}</P>
+  <img src="/assets/avatars/{{collab.user.avatar}}" --}}
+  
+  <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
+  <span>{{collab.user.user_name}}</span>
+  {{/each}}
+</div>
 </section>
+
+<script src="/js/collaborate.js"></script>
