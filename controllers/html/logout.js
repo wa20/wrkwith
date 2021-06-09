@@ -1,17 +1,20 @@
 const router = require('express').Router();
 
+// logout user and redirect to homepage
 
-//logout function 
-
-router.post('/logout', (req, res) => {
+  router.get('/login', (req, res) => {
+    // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-      req.session.destroy(() => {
-        res.status(204).end();
-      });
-    } else {
-      res.status(404).end();
+      res.redirect('/');
+      return;
     }
+  
+    res.render('homepage');
   });
 
 
+
   module.exports = router
+
+
+  
