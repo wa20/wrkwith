@@ -10,10 +10,10 @@ router.put('/', withAuth, async (req, res) => {
       {
         user_name: req.body.userName,
           email: req.body.email,
-          // password: req.body.password,
+          password: req.body.password,
           first_name:req.body.firstName,
           last_name:req.body.lastName,
-          bio:req.body.nio
+          bio:req.body.bio
       },
       {
         where  : {
