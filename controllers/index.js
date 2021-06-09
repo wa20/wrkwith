@@ -5,7 +5,7 @@ const htmlRoutes = require("./html")
 // const User = require('../models/user');
 
 router.use("/api", apiRoutes)
-router.use("/html", htmlRoutes)
+router.use("/", htmlRoutes)
 
 //logout
 // router.get('/login', (req, res) => {
