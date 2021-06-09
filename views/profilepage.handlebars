@@ -38,13 +38,8 @@
 
 
 <section class="section is-medium is-flex is-justify-content-center is-align-content-center">
-{{#if projects.length}}
 
-{{!-- <h1 class="title">My Projects</h1> --}}
- <button class="button is-large is-light">
-     Add A New Project   &nbsp &nbsp
-     <i class="fas fa-plus-square"></i>
-</button>
+{{!-- {{#if projects.length === 0}} --}}
 
 {{#each projects as |project|}}
 <div class="ui cards">
@@ -70,7 +65,17 @@
   </div>
 
 {{/each}}
-{{/if}}
+
+
+{{!-- <h1 class="title">My Projects</h1> --}}
+ <a href="/html/newproject" class="button is-large is-light">
+     Add A New Project   &nbsp &nbsp
+     <i class="fas fa-plus-square"></i>
+</a>
+
+
+{{!-- {{/if}} --}}
+
 </section>
 
 

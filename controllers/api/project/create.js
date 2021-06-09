@@ -6,13 +6,16 @@ const { User, Project, Collab } = require('../../../models')
 
 // creating a new project 
 
-router.post("/new", async (req,res)=>{
+router.post("/new", withAuth, async (req,res)=>{
+
+
+
     try{
         const newproject = await Project.create({
             title: req.body.title,
             tech: req.body.technology,
             details:req.body.details,
-            creator:1
+            creator:req.session.user_id
         })
         res.status(200).json(newproject)
     } catch (err) {
