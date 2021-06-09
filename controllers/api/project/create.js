@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const withAuth = require("../../../utils/auth")
-const { User, Project, Collab } = require('../../../models')
+const { User, Project, Collab } = require('../../../models');
+const { parse } = require('dotenv');
 
 // TODO ask tutor to check connection 
 
@@ -8,9 +9,12 @@ const { User, Project, Collab } = require('../../../models')
 
 router.post("/new", withAuth, async (req,res)=>{
 
-
-
     try{
+        console.log("///////////////////////////////////////////NEW PROJECT")
+        console.log("user id is" + req.session.user_id)
+        
+        console.log("req body= " + req.body.title)
+        console.log("///////////////////////////////////////////////")
         const newproject = await Project.create({
             title: req.body.title,
             tech: req.body.technology,
