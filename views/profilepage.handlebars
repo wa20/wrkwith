@@ -22,7 +22,7 @@
         <p> <b>Bio:</b> </p>{{bio}}</p>
       </div>
       <div class="mt-4">
-        <button href="/editaccount" class="button is-dark"><i class="fas fa-edit"></i>&nbsp Edit Account</button>
+        <a href="/html/profile-edit" class="button is-dark"><i class="fas fa-edit"></i>&nbsp Edit Account</a>
         <button class="button is-dark"><i class="fas fa-trash-alt"></i></i>&nbsp Delete Account</button>
       </div>
     </div>
@@ -35,14 +35,46 @@
   &nbsp My Projects
 </h2>
 
+
+
 <section class="section is-medium is-flex is-justify-content-center is-align-content-center">
+{{#if projects.length}}
+
 {{!-- <h1 class="title">My Projects</h1> --}}
  <button class="button is-large is-light">
      Add A New Project   &nbsp &nbsp
      <i class="fas fa-plus-square"></i>
 </button>
 
+{{#each projects as |project|}}
+<div class="ui cards">
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+      <div class="header">
+        Elliot Fu
+      </div>
+      <div class="meta">
+        Friends of Veronika
+      </div>
+      <div class="description">
+        Elliot requested permission to view your contact details
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <div class="ui basic green button">Approve</div>
+        <div class="ui basic red button">Decline</div>
+      </div>
+    </div>
+  </div>
+
+{{/each}}
+{{/if}}
 </section>
+
+
+
 <h2 class="ui horizontal divider header">
   <i class="fas fa-handshake"></i>
   &nbsp My Collaborations
