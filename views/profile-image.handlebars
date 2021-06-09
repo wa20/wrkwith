@@ -13,14 +13,14 @@
 
 
 <div class="ui placeholder segment is-align-content-center">
-  <div class="is-size-4">
+  {{!-- <div class="is-size-4">
     <i class="pdf file outline icon"></i>
     No documents are listed for this customer.
-  </div>
-  <form action="/api/user/create/upload" method="POST" encType="multipart/form-data">
+  </div> --}}
+<form action="/api/user/create/upload" method="POST" encType="multipart/form-data" class="">
   <h3>Upload Profile Photo</h3>
   <input type="file" name="samplefile" accept="image/*" />
-  <input type="submit" class="btn btn-primary">
+  <input type="submit" class="button btn btn-primary">
 </form>
 </div>
 

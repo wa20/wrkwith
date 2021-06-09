@@ -33,7 +33,7 @@ signUP.addEventListener("click", async (event) => {
   if (submitNewUser.ok) {
     //redirect to profile
 
-    document.location.replace("/html/login")
+    document.location.replace("/login")
 
   } else {
     alert("Sign Up Failed");
