@@ -156,3 +156,12 @@ width: 100vw;
   font-style: italic;
   color: coral;
 }
+
+
+.user_text{
+  font-style: italic;
+}
+
+.section_title{
+  font-size: 1.5rem;
+}
