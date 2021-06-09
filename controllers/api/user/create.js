@@ -54,6 +54,19 @@ router.post('/login', async (req, res) =>{
 
 });
 
+
+//logout current user and destroy session 
+
+router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
+
 // to upload an image to the db
 
 router.post("/upload", (req, res) =>{
