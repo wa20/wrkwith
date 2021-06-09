@@ -22,7 +22,7 @@ console.log("trying to log in")
         });
 
         if(response.ok){
-            document.location.replace('/html/profile');
+            document.location.replace('/profile');
         } else {
             alert(response.statusText)
         }
