@@ -3,8 +3,8 @@
 <section class="section is-medium">
 
 <div class="ui top attached tabular menu">
-  <a href="/editaccount" class="item active" data-tab="first">Edit Profile</a>
-  <a href="/editimage" class="item" data-tab="second">Edit Profile Image</a>
+  <a href="/profile-edit" class="item active" data-tab="first">Edit Profile</a>
+  <a href="/profile-image" class="item" data-tab="second">Edit Profile Image</a>
 </div>
 
 <div class="ui bottom attached segment">
@@ -17,35 +17,52 @@
     <div class="two fields">
       <div class="field">
         <label>First Name</label>
-        <input placeholder="{{first_name}}" type="text" id="firstNameEdit">
+        <input value="{{first_name}}" type="text" id="firstNameEdit">
       </div>
       <div class="field">
         <label>Last Name</label>
-        <input placeholder="{{last_name}}" type="text" id="lastNameEdit">
+        <input value="{{last_name}}" type="text" id="lastNameEdit">
       </div>
     </div>
   {{!-- username and email field --}}
     <div class="two fields">
     <div class="field">
       <label>Username</label>
-      <input placeholder="{{username}}" type="text" id="usernameEdit">
+      <input value="{{user_name}}" type="text" id="usernameEdit">
     </div>
     <div class="field">
       <label>Email</label>
-      <input placeholder="{{email}}" type="email" id="emailEdit">
+      <input value="{{email}}" type="email" id="emailEdit">
     </div>
     </div>
 
+
+<div class="two fields">
+  <div class="field">
+      <label>Enter New Password</label>
+      <input type="password" value="" id="PWMainEdit">
+    </div>
+    <div class="field">
+      <label>Confirm New Password</label>
+      <input type="password" value="" id="PWCheckEdit">
+    </div>
+</div>
+
+
+
+
+
+
     <div class="field">
       <label>Bio</label>
-      <textarea placeholder="Update Bio..." id="bioEdit"></textarea>
+      <textarea value="{{bio}}" id="bioEdit"></textarea>
     </div>
     
   {{!-- add langauge section --}}
     
 
-    <div class="ui red submit button">Submit changes</div>
-    <div class="ui grey submit button mt-3">Cancel changes</div>
+    <div class="ui red submit button" id="submitChange">Submit changes</div>
+    <a href="/html/profile" class="ui grey submit button mt-3">Cancel changes</a>
   </form>
   <div class="ui bottom attached warning message">
     <i class="fas fa-user-circle"></i>
@@ -56,3 +73,5 @@
 
 
 </section>
+
+<script src="/js/profile-edit.js"></script>

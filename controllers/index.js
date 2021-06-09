@@ -5,18 +5,9 @@ const htmlRoutes = require("./html")
 // const User = require('../models/user');
 
 router.use("/api", apiRoutes)
-router.use("/html", htmlRoutes)
+router.use("/", htmlRoutes)
 
-//logout
-// router.get('/login', (req, res) => {
-//   // If the user is already logged in, redirect the request to another route
-//   if (req.session.logged_in) {
-//     res.redirect('/');
-//     return;
-//   }
 
-//   res.render('login');
-// });
 
 //upload function
 router.get("/upload", async (req, res) => {

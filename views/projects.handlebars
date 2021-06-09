@@ -1,7 +1,9 @@
 {{>loggedIn}}
 
 <section class="section is-medium">
-{{#each projects as |project|}}
+<div class="ui link cards">
+  {{#each projects as |project|}}
+  <a href="/project/{{id}}">
 
   <div class="ui cards">
   <div class="card">

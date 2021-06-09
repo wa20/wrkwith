@@ -26,6 +26,7 @@ const sessionOptions = {
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
+// app.use(bodyParser.json())
 app.use(express.json());
 app.use(fileUpload());
 app.use(express.urlencoded({ extended: true }));
