@@ -95,7 +95,7 @@ console.log("this is the sample file  :::" + samplefile.name)
         res.status(404).json({message:`we are stuck here for some reaosn`});
         return
     } 
-        res.status(200).json({message:`picture uploaded`});
+        res.status(200).redirect("/profile");
 })
 
 })
