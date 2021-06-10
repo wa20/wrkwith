@@ -4,11 +4,11 @@ const withAuth = require("../../utils/auth")
 
 
   //get details to edit project
-  router.get('/',  async (req, res) =>{
+  router.get('/:id',  async (req, res) =>{
     
     
     try{
-    const projectData = await Project.findOne({where: {id: req.body.id}});
+    const projectData = await Project.findOne({where: {id: req.params.id}});
       const project = projectData.get({plain: true});
       res.render('project-edit', {
         ...project,

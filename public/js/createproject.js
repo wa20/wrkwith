@@ -23,7 +23,7 @@ createProject.addEventListener("click", async(event) =>{
     });
 
     if (newProject.ok) {
-        document.location.replace("/html/projects")
+        document.location.replace("/projects")
     } else {
         alert ("failed to create project")
     }

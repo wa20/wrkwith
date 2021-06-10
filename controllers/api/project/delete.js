@@ -3,10 +3,10 @@ const { User, Project } = require("../../../models")
 
 router.delete("/", async (req, res) => {
 	try {
-		console.log("//////////////////// project id to delete ::" + req.body)
+		
 		const projectData = await Project.destroy({
 			where: {
-				id: req.body,
+				id: req.body.id
 			},
 		})
 
@@ -17,7 +17,7 @@ router.delete("/", async (req, res) => {
 			return
 		}
 
-		res.status(200).json(postData)
+		res.status(200).location.replace("/homepage")
 	} catch (err) {
 		res.status(500).json(err)
 	}
