@@ -11,6 +11,8 @@ const homeRoute = require("./homepage")
 const signupRoute = require("./signup")
 const loginRoute = require("./login")
 const newprojectroute = require("./newproject")
+const editProjectRoute=require("./project-edit")
+const myprojectRoute=require("./myproject")
 // const viewUserRoute = require("./view-user")
 
 
@@ -27,6 +29,8 @@ router.use("/homepage",homeRoute);
 router.use("/signup", signupRoute);
 router.use("/login" , loginRoute);
 router.use("/newproject", newprojectroute)
+router.use("/editproject", editProjectRoute)
+router.use("/myproject",myprojectRoute)
 // router.use("/view-user", viewUserRoute )
 
 
