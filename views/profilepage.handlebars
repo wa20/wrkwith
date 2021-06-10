@@ -37,60 +37,197 @@
 
 
 
-<section class="section is-medium is-flex is-justify-content-center is-align-content-center">
+<section class="section is-small is-flex is-justify-content-center is-align-content-center">
 
-{{!-- {{#if projects.length === 0}} --}}
-
-{{#each projects as |project|}}
-<div class="ui cards">
-  <div class="card">
-    <div class="content">
-      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
-      <div class="header">
-        Elliot Fu
-      </div>
-      <div class="meta">
-        Friends of Veronika
-      </div>
-      <div class="description">
-        Elliot requested permission to view your contact details
-      </div>
-    </div>
-    <div class="extra content">
-      <div class="ui two buttons">
-        <div class="ui basic green button">Approve</div>
-        <div class="ui basic red button">Decline</div>
-      </div>
-    </div>
-  </div>
-
-{{/each}}
-
-
-{{!-- <h1 class="title">My Projects</h1> --}}
- <a href="/newproject" class="button is-large is-light">
+ <a href="/newproject" class="button is-light">
      Add A New Project   &nbsp &nbsp
      <i class="fas fa-plus-square"></i>
 </a>
-
-
-{{!-- {{/if}} --}}
-
 </section>
 
+<section class="section is-small gridBox">
+{{!-- cards section --}}
+     {{!-- {{#each projects as |project|}} --}}
+
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> View Project
+    </div>
+  </div>
+</a>
+
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+<a class="ui raised link card" href="">
+  <div class="content">
+    <div class="header">{{ph}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{date}} </span>
+      <span class="category">Project</span>
+    </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
+    </div>
+  </div>
+</a>
+
+{{!-- {{/each}} --}}
+</section>
 
 
 <h2 class="ui horizontal divider header">
   <i class="fas fa-handshake"></i>
   &nbsp My Collaborations
 </h2>
-<section class="section is-medium is-flex is-justify-content-center is-align-content-center">
 
-     <button class="button is-large is-light">
+
+<section class="section is-small is-flex is-justify-content-center is-align-content-center">
+{{!-- button section  --}}
+     <button class="button is-light">
      Contribute To A Project  &nbsp &nbsp
      <i class="fas fa-plus-square"></i>
+</section>
+
+<section class="section is-small gridBox">
+{{!-- cards section --}}
+     
  
 </section>
 
 
-<script src="../js/deleteUser.js"></script>
+<script src="js/deleteUser.js"></script>

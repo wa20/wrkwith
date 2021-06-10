@@ -1,8 +1,8 @@
 {{>loggedIn}}
-<section class="section is-medium">
+<section class="section is-medium projecstGridBox">
+
+{{#each projects }}
 <div class="ui link cards">
-  
-  {{#each projects }}
 <a href="/project/{{id}}">
 <div class="card">
     <div class="content">
@@ -24,23 +24,7 @@
       </div>
     </div>
   </div>
-
-
-  
-
-  {{!-- <div class="card">
-    <div class="content">
-      <div class="header">{{title}}</div>
-      <div class="meta">
-        <p> {{details}}</p> 
-      </div>
-      <div class="description">
-        need to add this to the database !! 
-      </div>
-    </div>
- 
-  </div> --}}
-    </a>
-  {{/each}}
+</a>
 </div>
+{{/each}}
 </section>

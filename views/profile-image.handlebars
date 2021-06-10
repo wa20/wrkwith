@@ -5,38 +5,27 @@
   <a href="/profile-edit" class="item" data-tab="first">Edit Profile</a>
   <a href="/profile-image" class="item active" data-tab="second">Edit Profile Image</a>
 </div>
-<div class="ui bottom attached tab segment" data-tab="first">
-  First
-</div>
+{{!-- <div class="ui bottom attached tab segment" data-tab="first">
+</div> --}}
 <div class="ui bottom attached tab segment active" data-tab="second">
 
+    <h3 class="ui horizontal divider header">
+      <i class="fas fa-upload"></i>
+      &nbsp Upload Image
+    </h3>
+    <div class="ui segment">
+        <form action="/api/user/create/upload" method="POST" encType="multipart/form-data" class="uploadImage">
 
 
-<div class="ui placeholder segment is-align-content-center">
-  {{!-- <div class="is-size-4">
-    <i class="pdf file outline icon"></i>
-    No documents are listed for this customer.
-  </div> --}}
-<form action="/api/user/create/upload" method="POST" encType="multipart/form-data" class="">
-  <h3>Upload Profile Photo</h3>
-  <input type="file" name="samplefile" accept="image/*" />
-  <input type="submit" class="button btn btn-primary">
-</form>
+          <input type="file" name="samplefile" accept="image/*" class="chooseFileBtn"/>
+
+          <input type="submit" class="button is-fullwidth is-dark btn btn-primary">
+
+
+        </form>
+    </div>
+
 </div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
 
 </section>
 
