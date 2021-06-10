@@ -11,7 +11,7 @@ router.get("/:id", async (req, res) => {
       include:[
         {
           model:User,
-          attributes:["user_name","avatar"]
+          attributes:["user_name","avatar","email"]
         },
         {
           model:Collab,
