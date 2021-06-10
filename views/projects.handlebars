@@ -1,30 +1,31 @@
 {{>loggedIn}}
+
+
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp Projects
+</h2>
+
 <section class="section is-medium projecstGridBox">
 
 {{#each projects }}
-<div class="ui link cards">
-<a href="/project/{{id}}">
-<div class="card">
-    <div class="content">
-      <img class="right floated mini ui image" src="/assets/avatars/{{user.avatar}}">
-      <div class="header">
-       <B>{{title}}</B> 
-      </div>
-      <div class="meta">
-       created by {{user.user_name}} on {{format_date date_created}}
-      </div>
-      <div class="description">
-        <P>{{details}} </P>
-      </div>
+<a class="ui raised link card" href="/project/{{id}}">
+  <div class="content">
+    <div class="header">{{title}}</div>
+    <div class="meta">
+      <span class="right floated time">{{format_date date_created}} </span>
+      <span class="category">{{user.user_name}}</span>
     </div>
-    <div class="extra content">
-      <div class="ui two buttons">
-        <div class="ui basic green button">VIEW PROJECT</div>
-        {{!-- <div class="ui basic red button">Decline</div> --}}
-      </div>
+    <div class="description">
+      <p>{{details}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/avatars/{{user.avatar}}">
     </div>
   </div>
 </a>
-</div>
 {{/each}}
+
 </section>
