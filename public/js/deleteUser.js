@@ -1,15 +1,16 @@
-const deleteAccount = document.getElementById("deleteAccount");
+const deleteAccount = document.getElementById("deleteAccount")
+
 
 
 deleteAccount.addEventListener("click", async (event)=> {
 
     event.preventDefault();
-
+const user_id = event.target.getAttribute("data-id")
     const response = await fetch('api/user/delete/',{
         method: 'DELETE',
         body: JSON.stringify({
             
-            userID: req.session.user_id,
+            userID: user_id,
 
         }),
         headers: { 'Content-Type': 'application/json' },
