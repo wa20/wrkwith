@@ -8,7 +8,7 @@ router.delete('/', withAuth, async (req, res) => {
     try{
         const userData = await User.destroy({
             where: {
-                id: req.params.userID,
+                id: req.body.userID,
             }
         })
 

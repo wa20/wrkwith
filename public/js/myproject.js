@@ -1,29 +1,30 @@
 
 
-const editEl = document.querySelector("#edit")
+
+// const editEl = document.querySelector("#edit")
 const deleteEl = document.querySelector("#delete")
 
 
-const editProject = async (event) =>{
-    event.preventDefault();
-    const projectid=event.target.getAttribute("data-id")
+// const editProject = async (event) =>{
+//     event.preventDefault();
+//     const projectid=event.target.getAttribute("data-id")
     
-    console.log("////////////////////////////////////////" + projectid)
+//     console.log("////////////////////////////////////////" + projectid)
 
-    const editres= await fetch ("/editproject", {
-        method:"POST",
-        body: {
-            id:projectid
-        },
-        headers:{ "Content-Type": "application/json"}
-    })
+//     const editres= await fetch ("/editproject", {
+//         method:"POST",
+//         body: {
+//             id:projectid
+//         },
+//         headers:{ "Content-Type": "application/json"}
+//     })
 
-    if (editres.ok){
-        alert("yay")
-    } else {
-        alert ("failed to edit project")
-    }
-}
+//     if (editres.ok){
+//         alert("yay")
+//     } else {
+//         alert ("failed to edit project")
+//     }
+// }
 
 const deleteProject = async (event) =>{
     event.preventDefault();
@@ -31,8 +32,8 @@ const deleteProject = async (event) =>{
 
     const delres = await fetch ("/api/project/delete/" 
     , {
-        method:"POST",
-        body: JSON.stringify({projectid}),
+        method:"DELETE",
+        body:{ id: JSON.stringify(projectid)},
         headers:{ "Content-Type": "application/json"}
     })
     if (delres.ok){
@@ -43,5 +44,5 @@ const deleteProject = async (event) =>{
 }
 
 
-editEl.addEventListener("click", editProject);
+// editEl.addEventListener("click", editProject);
 deleteEl.addEventListener("click",deleteProject)
