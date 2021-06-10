@@ -23,13 +23,14 @@ const fetchOptions = {
     headers: { "Content-Type": "application/json" },
   }
   
-  const submitChange = await fetch("/api/project/update", fetchOptions);
+  const submitChange = await fetch("/api/project/edit", fetchOptions);
   
   console.log(submitChange)
   
   if (submitChange.ok) {
       //redirect to profile
       document.location.replace(`/myproject/${projectid}`)
+      // document.location.replace("/homepage")
     } else {
       alert("Update Failed");
     }
