@@ -1,45 +1,50 @@
 {{>loggedIn}}
-<section>
-  <div class="row">
-   <div>
-      <h2 class="ui huge header left aligned">{{title}}</h2>
-      
-        <h2 class="ui header">
-      <img src="/assets/avatars/{{user.avatar}}" class="ui circular image">
-      {{user.user_name}}
-    </h2>
-        <p class="section_title">created on: <span class="user_text">{{format_date date_created}}</span></p>
-         </div>
-         <div>
-       
-  {{!-- <div class="ui red submit button" data-id="{{id}}" id="collaborate">WRK with</div>
-         </div>
-  </div> --}}
-  
-  <div class="ui red submit button" data-id="{{id}}" id="edit">Edit Project</div>
-         </div>
-  </div>
 
-  <div class="ui red submit button" data-id="{{id}}" id="delete">Delete Project</div>
-         </div>
-  </div>
+<section class="section is-small is-flex is-justify-content-center">
+<div class="item">
+
+<div class="image">
+  <img src="/assets/avatars/{{user.avatar}}" class="ui circular image">
+</div>
+
+<div class="content">
+  
+<h2 class="ui huge header left aligned">{{title}}</h2>
+<h2 class="ui header"> {{user.user_name}}</h2>
+<p class="section_title">created on: <span class="user_text">{{format_date date_created}}</span></p>
+      
+<div class="item">
+  <div class="ui is-dark submit button mt-2" data-id="{{id}}" id="edit">Edit Project</div>   
+  <div class="ui is-dark submit button mt-2" data-id="{{id}}" id="delete">Delete Project</div>
+</div> 
+<div class="ui orange submit button is-fullwidth mt-2" data-id="{{id}}" id="collaborate">WRK with</div>     
+
+</div>    
+</section>
 
   
 <h2 class="ui horizontal divider header">
   <i class="fas fa-tasks"></i>
   &nbsp Project details
 </h2>
+
+
+
+<section class="section is-small is-flex is-justify-content-center">
 <P>{{details}}</P>
 <P> technology used: {{tech}}</P>
-
 </section>
-<section>
-  <h2 class="ui horizontal divider header">
-  <i class="fas fa-tasks"></i>
+
+
+
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-handshake"></i>
   &nbsp Collaborators
 </h2>
 
-<div class="row">
+<section class="section is-small">
+
+<div class="row gridBox">
   {{#each collabs as |collab|}}
   {{!-- <P> name:{{collab.user.user_name}}</P>
   <img src="/assets/avatars/{{collab.user.avatar}}" --}}
