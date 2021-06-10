@@ -90,6 +90,29 @@
 
 <section class="section is-small gridBox">
 {{!-- cards section --}}
+
+{{#each collabs as | collab |}}
+<a class="ui raised link card" href="/project/{{project.id}}">
+  <div class="content">
+    <div class="header">{{project.title}}</div>
+    <div class="meta">
+      <span class="right floated time">Created On: {{format_date project.date_created}} </span>
+      <span class="category">{{project.user.user_name}}</span>
+    </div>
+    <div class="description">
+      <p></p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="center aligned author">
+      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> View Project
+    </div>
+  </div>
+</a>
+
+
+
+{{/each}}
      
  
 </section>
