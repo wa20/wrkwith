@@ -16,7 +16,8 @@ router.get("/", withAuth, async (req, res) => {
         },
         {
           model: Collab,
-          include: { model: User, attributes: ["user_name", "avatar"] },
+          include: { model: Project, attributes: ["title", "date_created", "id"],
+          include:{model: User, attributes: ["user_name"] }},
         },
         
       ],
