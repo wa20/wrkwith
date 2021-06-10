@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require("../../../utils/auth")
 const { User } = require('../../../models');
 
 
@@ -81,6 +82,7 @@ uploadpath = "__dirname:../../public/assets/avatars/"+samplefile.name;
 console.log(samplefile)
 console.log(" the uplod path is :::" + uploadpath)
 
+// TODO FIX THE UPLOAD FUNCTION AGAIN
 // to move the file into storage 
 
 samplefile.mv(uploadpath,  async function(err){
@@ -88,7 +90,7 @@ samplefile.mv(uploadpath,  async function(err){
 console.log("this is the sample file  :::" + samplefile.name)
     const uploadimage = await User.update({avatar: samplefile.name}, {
         where:{
-            id:2
+            id:req.session.user_id
         }
     });
     if (!uploadimage){
