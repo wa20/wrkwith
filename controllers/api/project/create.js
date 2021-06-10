@@ -3,7 +3,7 @@ const withAuth = require("../../../utils/auth")
 const { User, Project, Collab } = require('../../../models');
 const { parse } = require('dotenv');
 
-// TODO ask tutor to check connection 
+
 
 // creating a new project 
 

@@ -1,11 +1,12 @@
 const router = require("express").Router()
 const { User, Project } = require("../../../models")
 
-router.delete("/:id", async (req, res) => {
+router.delete("/", async (req, res) => {
 	try {
+		console.log("//////////////////// project id to delete ::" + req.body)
 		const projectData = await Project.destroy({
 			where: {
-				id: req.params.id,
+				id: req.body,
 			},
 		})
 
