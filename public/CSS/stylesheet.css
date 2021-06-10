@@ -114,8 +114,6 @@ width: 100vw;
 }
 
 
-
-
 .signupbox, .loginbox{
   display: flex;
   align-items: center;
@@ -123,8 +121,40 @@ width: 100vw;
   flex-direction: column;
 }
 
+/* ==============================================
+-  profile page grid
+============================================== */
 
+.gridBox{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: rgba(241, 240, 240, 0.288);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-height: 400px;
+  overflow: auto;
+}
 
+/* ==============================================
+-  image upload page
+============================================== */
+
+.uploadImage{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(241, 240, 240, 0.418);
+  border-radius: 5px;
+}
+
+.chooseFileBtn{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin: 5rem;
+  padding-left: 8rem;
+}
 /* ==============================================
 -  Boxs
 ============================================== */
