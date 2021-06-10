@@ -136,6 +136,20 @@ width: 100vw;
 }
 
 /* ==============================================
+-  project pages grid
+============================================== */
+
+.projecstGridBox{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: rgba(241, 240, 240, 0.288);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-height: 400px;
+  overflow: auto;
+}
+
+/* ==============================================
 -  image upload page
 ============================================== */
 
