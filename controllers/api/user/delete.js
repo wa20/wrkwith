@@ -3,7 +3,7 @@ const { User } = require('../../../models');
 const withAuth = require('../../../utils/auth');
 
 //TODO: fix delete function
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/', withAuth, async (req, res) => {
     
     try{
         const userData = await User.destroy({

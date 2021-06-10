@@ -17,8 +17,8 @@ router.put('/', withAuth, async (req, res) => {
           id: req.body.id
         }},
     )
-    console.log('updated project ',updateProject)
-    res.status(200)
+    
+    res.status(200).json(updateProject)
 
   } catch (err) {
 
