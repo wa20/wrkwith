@@ -14,7 +14,7 @@
     <div class="content">
       <a class="header">{{first_name}} {{last_name}}</a> 
       <div class="meta">
-        <span class="">Joined On:{{date}}</span>
+        <span class="">Joined On: {{format_date date_joined}}</span>
       </div>
       <div class="description">
         <p> <b>Username:</b> {{user_name}}</p>
@@ -48,16 +48,17 @@
 <section class="section is-small gridBox">
 {{!-- cards section --}}
      {{!-- {{#each projects as |project|}} --}}
+{{#each projects as | project |}}
 
-<a class="ui raised link card" href="">
+<a class="ui raised link card" href="/myproject/{{id}}">
   <div class="content">
-    <div class="header">{{ph}}</div>
+    <div class="header">{{title}}</div>
     <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
+      <span class="right floated time">Created On: {{format_date date_created}} </span>
+      <span class="category">{{user.user_name}}</span>
     </div>
     <div class="description">
-      <p>{{details}}</p>
+      <p></p>
     </div>
   </div>
   <div class="extra content">
@@ -67,144 +68,8 @@
   </div>
 </a>
 
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
+{{/each}}
 
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
-
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
-<a class="ui raised link card" href="">
-  <div class="content">
-    <div class="header">{{ph}}</div>
-    <div class="meta">
-      <span class="right floated time">Created On: {{date}} </span>
-      <span class="category">Project</span>
-    </div>
-    <div class="description">
-      <p>{{details}}</p>
-    </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/undraw_Projections_re_1mrh.svg"> {{project}}
-    </div>
-  </div>
-</a>
 
 {{!-- {{/each}} --}}
 </section>
