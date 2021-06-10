@@ -1,22 +1,33 @@
 {{>loggedIn}}
 <section class="section is-medium">
-<div class="ui link cards">
-  {{#each projects as |project|}}
-  <a href="/project/{{id}}">
+ <div class="ui link cards">
+   {{#each projects as |project|}}
+   <a href="/project/{{id}}">
 
-  <div class="card">
-    <div class="content">
-      <div class="header">{{title}}</div>
+   <div class="ui cards">
+   <div class="card">
+     <div class="content">
+       <img class="right floated mini ui image" src="{{projects}}">
+       <div class="header">
+         {{project.title}}
+       </div>
+       <div class="meta">
+         created by: {{username}}
+       </div>
       <div class="meta">
-        <p> {{details}}</p> 
-      </div>
-      <div class="description">
-        need to add this to the database !! 
-      </div>
-    </div>
- 
-  </div>
-    </a>
-  {{/each}}
-</div>
+         date: {{date}}
+       </div>
+
+       <div class="description">
+        click below to view project
+       </div>
+     </div>
+     <div class="extra content">
+       <div class="ui two buttons">
+         <a href="/html/project/{{project.id}}" class="ui basic green button">View project</a>
+       </div>
+     </div>
+   </div>
+
+ {{/each}}
 </section>
