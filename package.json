@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Bipin",
   "main": "server.js",
+  "engines": {
+    "node": "15.9.0"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
