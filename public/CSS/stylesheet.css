@@ -135,6 +135,19 @@ width: 100vw;
   overflow: auto;
 }
 
+
+.profileContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+}
+
+.spacing{
+  padding: 1rem;
+}
+
 /* ==============================================
 -  project pages grid
 ============================================== */
@@ -148,6 +161,14 @@ width: 100vw;
   max-height: 400px;
   overflow: auto;
 }
+
+.detailsSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* ==============================================
 -  image upload page
