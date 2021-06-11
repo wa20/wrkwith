@@ -33,11 +33,13 @@ const deleteProject = async (event) =>{
     const delres = await fetch ("/api/project/delete/" 
     , {
         method:"DELETE",
-        body:{ id: JSON.stringify(projectid)},
+        body: JSON.stringify({
+            id: projectid
+        }),
         headers:{ "Content-Type": "application/json"}
     })
     if (delres.ok){
-        document.location.replace("/profilepage")
+        document.location.replace("/homepage")
     } else {
         alert ("failed to delete project")
     }

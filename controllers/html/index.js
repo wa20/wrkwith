@@ -13,7 +13,7 @@ const loginRoute = require("./login")
 const newprojectroute = require("./newproject")
 const editProjectRoute=require("./project-edit")
 const myprojectRoute=require("./myproject")
-// const viewUserRoute = require("./view-user")
+const viewUserRoute = require("./view-user")
 
 
 
@@ -31,7 +31,7 @@ router.use("/login" , loginRoute);
 router.use("/newproject", newprojectroute)
 router.use("/editproject", editProjectRoute)
 router.use("/myproject",myprojectRoute)
-// router.use("/view-user", viewUserRoute )
+router.use("/view-user", viewUserRoute )
 
 
 module.exports = router
