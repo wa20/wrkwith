@@ -86,9 +86,10 @@
   {{#each collabs as |collab|}}
  
   <div class="ui big horizontal divided list">
+    <a href="/view-user/{{collab.user.id}}">
     <div class="item">
    
-      {{#if avatar}}
+      {{#if collab.user.avatar}}
       <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
       {{else}} 
         <img class="ui avatar image" id="avatar" src="">
@@ -99,6 +100,7 @@
       </div>
     
     </div>
+    </a>
   </div>
 
   {{/each}}
