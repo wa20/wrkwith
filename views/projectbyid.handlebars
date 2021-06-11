@@ -1,27 +1,39 @@
 {{>loggedIn}}
 <link rel="stylesheet" href="../css/modal.css">
 
-<section>
-  <div class="row">
-   <div>
-      <h2 class="ui huge header left aligned">{{title}}</h2>
-      
-        <h2 class="ui header">
-      <img src="/assets/avatars/{{user.avatar}}" class="ui circular image">
-      {{user.user_name}}
-    </h2>
-        <p class="section_title">created on: <span class="user_text">{{format_date date_created}}</span></p>
-         </div>
-         <div>
-       
-  <div class="ui red submit button" data-id="{{id}}" id="collaborate">WRK with</div>
+
+
+<section class="section is-small is-flex is-justify-content-center">
+<div class="item">
+  
+<div class="profileContainer">
+    <div class="image spacing">
+      {{#if avatar}}
+      <img src="/assets/avatars/{{user.avatar}}" class="ui rounded image">
+      {{else}} 
+      <img class="ui small rounded image" id="avatar" src="">
+      {{/if}}
+    </div>
+
+
+  <div class="content spacing">
+      <h3 class="ui huge header left aligned">{{title}}</h3>
+      <h3 class="ui header"> Username: {{user.user_name}} </h3>
+      <p class="section_title">Created On: <span class="user_text">{{format_date date_created}}</span></p>
+  </div>
+    
+</div>
+
+  <div class="item is-flex is-justify-content-center"> 
+  <div class="ui orange submit button is-fullwidth mt-2" data-id="{{id}}" id="collaborate">WRK with</div>
       {{!-- <div class="ui green submit button" data-id="{{id}}" id="collaborate">Contact Me</div> --}}
-      <button id="myBtn" class="ui green submit button">Contact Me</button>
- 
+  <button id="myBtn" class="ui is-dark submit button is-fullwidth mt-2">Contact Me</button>
+  </div> 
+
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -32,7 +44,7 @@
         <i class="fas fa-mail-bulk fas-modal"></i>
       </div>
       <form action="/">
-        
+  
         <div class="info">
           <input class="fname" type="text" placeholder="name">
           
@@ -47,37 +59,51 @@
      </form>
     </div>
   </div>
-
 </div>
-      
-  {{!-- <div>
-    <img src="/assets/avatar/{{user.avatar}}">
-  </div> --}}
+</div>
+</section>
+ 
 
   
 <h2 class="ui horizontal divider header">
   <i class="fas fa-tasks"></i>
   &nbsp Project details
 </h2>
+
+<section class="section is-small detailsSection">
 <P>{{details}}</P>
 <P> technology used: {{tech}}</P>
 
 </section>
-<section>
+
+
   <h2 class="ui horizontal divider header">
   <i class="fas fa-tasks"></i>
   &nbsp Collaborators
 </h2>
+<section class="section is-small">
 
-<div class="row">
   {{#each collabs as |collab|}}
-  {{!-- <P> name:{{collab.user.user_name}}</P>
-  <img src="/assets/avatars/{{collab.user.avatar}}" --}}
-  
-  <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
-  <span>{{collab.user.user_name}}</span>
+ 
+  <div class="ui big horizontal divided list">
+    <div class="item">
+   
+      {{#if avatar}}
+      <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
+      {{else}} 
+        <img class="ui avatar image" id="avatar" src="">
+      {{/if}}
+      
+      <div class="content">
+        <div class="header">{{collab.user.user_name}}</div>
+      </div>
+    
+    </div>
+  </div>
+
   {{/each}}
-</div>
+
 </section>
 
 <script src="/js/collaborate.js"></script>
+<script src="/js/randomProfile.js"></script>
