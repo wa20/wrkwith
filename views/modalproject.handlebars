@@ -1,0 +1,39 @@
+{{>loggedIn}}
+
+<div class="ui horizontal divider">or</div>
+<form class="ui form segment">
+  <p>Tell Us About Yourself</p>
+  <div class="two fields">
+    <div class="field">
+      <label>Name</label>
+      <input placeholder="First Name" name="name" type="text">
+    </div>
+    <div class="field">
+    </div>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>Username</label>
+      <input placeholder="{{first_name}}" type="text">
+    </div>
+    
+  <div class="field">
+    <label>Skills</label>
+    <select name="skills" multiple="" class="ui dropdown">
+      <option value="">Select Skills</option>
+      <option value="css">CSS</option>
+      <option value="html">HTML</option>
+      <option value="javascript">Javascript</option>
+      <option value="design">Graphic Design</option>
+     
+    </select>
+  </div>
+  <div class="inline field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="terms">
+      <label>I agree to the terms and conditions</label>
+    </div>
+  </div>
+  <div class="ui primary submit button">Submit</div>
+  <div class="ui error message"></div>
+</form>
