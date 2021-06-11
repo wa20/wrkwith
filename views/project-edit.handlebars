@@ -4,36 +4,43 @@ TODO attach js to this file to hit the backend
 
 <section class="section is-medium">
 
-
-<div class="ui bottom attached segment">
-  <div class="ui attached inverted message box">
+<div class="ui attached inverted message box">
     <div class="header">Edit Project</div>
-    
+    <p>Update project details below</p>
   </div>
+
+  
   <form class="ui form attached fluid segment signUP">
   {{!--first and last name field--}}
     
-      <div class="field"></div>
-        <label>Project <Title></Title></label>
-        <input value="{{title}}" type="text" id="projectTitile">
-      </div>
-      <div class="field">
+    <div class="field">
+      <label>Project Title </label>
+      <input value="{{title}}" type="text" id="projectTitile">
+    </div>
+
+    <div class="field">
+      <label>Project Details</label>
+      <textarea placeholder="{{details}}" type="text" id="details"></textarea>
+    </div>
+
+      
+      {{!-- <div class="field">
         <label>Details</label>
         <input value="{{details}}" type="text" id="details">
-      </div>
-      <div class="field">
-        <label>Technology used</label>
-        <input value="{{tech}}" type="text" id="tech">
-      </div>
+      </div> --}}
+
+
+    <div class="field">
+      <label>Technology used</label>
+      <textarea placeholder="{{tech}}" type="text" id="tech"></textarea>
+    </div>
       
        
   
-    
 
     <div class="ui red submit button" data-id="{{id}}" id="submitChange">Submit changes</div>
     <a href="/profile" class="ui grey submit button mt-3">Cancel changes</a>
   </form>
- 
 
 </div>
 
