@@ -1,9 +1,6 @@
 {{>loggedIn}}
 
-{{!-- <h2 class="ui horizontal divider header">
-  <i class="fas fa-tasks"></i>
-  &nbsp Profile
-</h2> --}}
+
 
 <section class="section is-small is-flex is-justify-content-center">
  <div class="ui divided items">
@@ -47,7 +44,7 @@
 
 <section class="section is-small gridBox">
 {{!-- cards section --}}
-     {{!-- {{#each projects as |project|}} --}}
+    
 {{#each projects as | project |}}
 
 <a class="ui raised link card" href="/myproject/{{id}}">
@@ -71,7 +68,7 @@
 {{/each}}
 
 
-{{!-- {{/each}} --}}
+
 </section>
 
 
@@ -118,4 +115,4 @@
 </section>
 
 
-<script src="js/deleteUser.js"></script>
+<script src="/js/deleteUser.js"></script>
