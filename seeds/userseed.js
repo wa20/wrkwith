@@ -18,7 +18,7 @@ const userData = [
         last_name:"sorry dont know!",
         password:"1234",
         bio:" full stack web dev in the making 2",
-        avatar:"/assets/avatars/avatar2.jpg"
+        
     },
     {
         user_name:"andrea",
@@ -37,7 +37,7 @@ const userData = [
         email:"w2@email.com",
         password:"1234",
         bio:" full stack web dev in the making 4",
-        avatar:"/assets/avatars/avatar3.jpg"
+        
     }
 ]
 
