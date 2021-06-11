@@ -1,0 +1,73 @@
+
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #FFAB00;
+  }
+  form {
+  padding: 25px;
+  margin: 25px;
+  box-shadow: 0 2px 5px #6F8A95; 
+  background: #6F8A95; 
+  }
+  .fas-modal {
+  margin: 25px 10px 0;
+  font-size: 72px;
+  color: #6F8A95;
+  }
+  .fa-envelope {
+  transform: rotate(-20deg);
+  }
+  .fa-at , .fa-mail-bulk{
+  transform: rotate(10deg);
+  }
+  input, textarea {
+  width: calc(100% - 18px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #6F8A95;
+  outline: none;
+  }
+  input::placeholder {
+  color: #666;
+  }
+  .button-modal {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #6F8A95; 
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  }
+  .svg-modal{
+    text-align: center;
+  }
+  .button-modal:hover {
+  background: #FFAB00;
+  }    
+  @media (min-width: 568px) {
+  .main-block {
+  flex-direction: row;
+  }
+  .left-part, form {
+  width: 50%;
+  }
+  .fa-envelope {
+  margin-top: 0;
+  margin-left: 20%;
+  }
+  .fa-at {
+  margin-top: -10%;
+  margin-left: 65%;
+  }
+  .fa-mail-bulk {
+  margin-top: 2%;
+  margin-left: 28%;
+  }
+  }
