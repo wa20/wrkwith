@@ -25,7 +25,7 @@
     color: black;
     animation: expand .8s ease forwards;
     background-color: var(--secondary-color);
-    opacity: 0.8;
+    /* opacity: 0.8; */
     position: relative;
     transition: all 1.2s ease;
   }
@@ -123,10 +123,10 @@
     }
   }
 
-  .section-2{
+  /* .section-2{
       background-image: url(../img/cover.png);
       background-position: center;
-  }
+  } */
 
   .section-3{
     background-image: url(../img/img1.jpeg);
