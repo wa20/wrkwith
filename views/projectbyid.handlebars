@@ -1,4 +1,6 @@
 {{>loggedIn}}
+<link rel="stylesheet" href="../css/modal.css">
+
 <section>
   <div class="row">
    <div>
@@ -13,10 +15,41 @@
          <div>
        
   <div class="ui red submit button" data-id="{{id}}" id="collaborate">WRK with</div>
-  <div class="ui red submit button" href="mailto:{{user.email}}" >{{user.email}}</div>
+      {{!-- <div class="ui green submit button" data-id="{{id}}" id="collaborate">Contact Me</div> --}}
+      <button id="myBtn" class="ui green submit button">Contact Me</button>
  
-         </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+     <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-envelope fas-modal"></i>
+        <i class="fas fa-at fas-modal"></i>
+        <i class="fas fa-mail-bulk fas-modal"></i>
+      </div>
+      <form action="/">
+        
+        <div class="info">
+          <input class="fname" type="text" placeholder="name">
+          
+        </div>
+        <p>Message</p>
+        <div>
+          <textarea rows="4"></textarea>
+        </div>
+<a href="mailto:{{user.email}}">
+             <h1 class="button-modal">Send</h1>
+      </a>     
+     </form>
+    </div>
   </div>
+
+</div>
+      
   {{!-- <div>
     <img src="/assets/avatar/{{user.avatar}}">
   </div> --}}
