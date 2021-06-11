@@ -59,9 +59,12 @@ html.ios body {
   }
   
   .hero-body{
-    background-image: url("../assets/Background-symbols.jpg");
-    background-position: center;
-    background-size: cover;
+    background-image: url("../../img/cover.png");
+    background-position:top;
+    background-size:cover;
+    margin-top: 70px;
+    
+    
   }
 
   .sticky{
