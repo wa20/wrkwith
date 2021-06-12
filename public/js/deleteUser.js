@@ -17,7 +17,7 @@ const user_id = event.target.getAttribute("data-id")
       });
     
       if (response.ok) {
-        document.location.replace('/homepage');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }

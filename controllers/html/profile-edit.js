@@ -3,6 +3,7 @@ const { User } = require('../../models');
 const withAuth = require("../../utils/auth")
 
 
+
   //get details to edit profile
   router.get('/', withAuth, async (req, res) =>{
     //Find the logged in user based on the session ID
