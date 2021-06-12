@@ -51,16 +51,15 @@
 </h2>
 
 <section class="section is-small">
-{{#each collabs as |collab|}}
- 
+
+ {{#each collabs as |collab|}}
   <div class="ui big horizontal divided list">
-    <a href="/view-user/{{collab.user.id}}">
     <div class="item">
    
-      {{#if collab.user.avatar}}
+      {{#if avatar}}
       <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
       {{else}} 
-        <img class="ui avatar image" id="avatar" src="">
+        <img class="ui avatar image" id="avatar" src="/assets/profiles/joe/jpg">
       {{/if}}
       
       <div class="content">
@@ -68,10 +67,9 @@
       </div>
     
     </div>
-    </a>
   </div>
+ {{/each}}
 
-  {{/each}}
 </section>
 
 <script src="/js/myproject.js"></script>
