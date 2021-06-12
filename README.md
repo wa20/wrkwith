@@ -145,8 +145,11 @@ SOFTWARE_
 ## Collaborator
 
 * Wael - <a href="https://github.com/wa20"> Github </a>
+
 * Harith  - <a href="https://github.com/omnikron"> Github </a>
+
 * Andrea  - <a href="https://github.com/lloret82"> Github </a>
+
 * Bipin - <a href="https://github.com/"> Github </a>
 
 <div id="Badge">
