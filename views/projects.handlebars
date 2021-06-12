@@ -8,25 +8,29 @@
 
 <section class="section is-medium projecstGridBox">
 
-{{#each projects }}
-<a class="ui raised link card" href="/project/{{id}}">
-  <div class="content">
-    <div class="header">{{title}}</div>
-    <div class="meta">
-      <span class="right floated time">{{format_date date_created}} </span>
-      <span class="category">{{user.user_name}}</span>
+  {{#each projects }}
+  <a class="ui raised link card" href="/project/{{id}}">
+    <div class="content">
+      <div class="header">{{title}}</div>
+      <div class="meta">
+        <span class="right floated time">{{format_date date_created}} </span>
+        <span class="category">{{user.user_name}}</span>
+      </div>
+      <div class="description">
+        <p>{{details}}</p>
+      </div>
     </div>
-    <div class="description">
-      <p>{{details}}</p>
+    <div class="extra content">
+      <div class="center aligned author">
+        {{#if avatar}}
+        <img class="ui avatar image" src="/assets/avatars/{{user.avatar}}">
+        {{else}}
+        <img class="ui avatar image" id="avatar" src="/assets/profiles/joe.jpg">
+        {{/if}}
+      </div>
     </div>
-  </div>
-  <div class="extra content">
-    <div class="center aligned author">
-      <img class="ui avatar image" src="/assets/avatars/{{user.avatar}}">
-    </div>
-  </div>
-</a>
-{{/each}}
+  </a>
+  {{/each}}
 
 </section>
 
