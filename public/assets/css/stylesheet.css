@@ -138,6 +138,29 @@ width: 100vw;
   overflow: auto;
 }
 
+.gridBox2{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: rgba(241, 240, 240, 0.288);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-height: 800px;
+  overflow: auto;
+}
+
+
+.profileContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+}
+
+.spacing{
+  padding: 1rem;
+}
+
 /* ==============================================
 -  project pages grid
 ============================================== */
@@ -151,6 +174,15 @@ width: 100vw;
   max-height: 400px;
   overflow: auto;
 }
+
+.detailsSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 /* ==============================================
 -  image upload page

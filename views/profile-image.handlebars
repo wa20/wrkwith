@@ -1,35 +1,31 @@
 {{>loggedInNoHero}}
 <section class="section is-medium">
 
-<div class="ui top attached tabular menu">
-  <a href="/profile-edit" class="item" data-tab="first">Edit Profile</a>
-  <a href="/profile-image" class="item active" data-tab="second">Edit Profile Image</a>
-</div>
-{{!-- <div class="ui bottom attached tab segment" data-tab="first">
-</div> --}}
-<div class="ui bottom attached tab segment active" data-tab="second">
+  <div class="ui top attached tabular menu">
+    <a href="/profile-edit" class="item" data-tab="first">Edit Profile</a>
+    <a href="/profile-image" class="item active" data-tab="second">Edit Profile Image</a>
+  </div>
+
+  <div class="ui bottom attached tab segment active" data-tab="second">
 
     <h3 class="ui horizontal divider header">
       <i class="fas fa-upload"></i>
       &nbsp Upload Image
     </h3>
     <div class="ui segment">
-        <form action="/api/user/create/upload" method="POST" encType="multipart/form-data" class="uploadImage">
+      <form action="/api/user/create/upload" method="POST" encType="multipart/form-data" class="uploadImage">
 
 
-          <input type="file" name="samplefile" accept="image/*" class="chooseFileBtn"/>
+        <input type="file" name="samplefile" accept="image/*" class="chooseFileBtn" />
 
-          <input type="submit" class="button is-fullwidth is-dark btn btn-primary">
+        <input type="submit" class="button is-fullwidth is-dark btn btn-primary">
 
 
-        </form>
+      </form>
     </div>
 
-</div>
+  </div>
 
 </section>
 
- <script src="js/tabFunction.js"></script>
- {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}
- 
- {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script> --}}
+<script src="/js/tabFunction.js"></script>

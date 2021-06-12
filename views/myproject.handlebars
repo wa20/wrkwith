@@ -1,30 +1,36 @@
 {{>loggedIn}}
 
 <section class="section is-small is-flex is-justify-content-center">
-<div class="item">
+  <div class="item">
 
-<div class="image">
-  <img src="/assets/avatars/{{user.avatar}}" class="ui circular image">
-</div>
+    <div class="profileContainer">
+      <div class="image spacing">
+        {{#if user.avatar}}
+        <img src="/assets/avatars/{{user.avatar}}" class="ui rounded image">
+        {{else}}
+        <img class="ui small rounded image" id="avatar" src="">
+        {{/if}}
+      </div>
 
-<div class="content">
-  
+      <div class="content spacing">
+        <h3 class="ui huge header left aligned">{{title}}</h3>
+        <h3 class="ui header">Owner: {{user.user_name}}</h3>
+        <p class="section_title">Created On: <span class="user_text">{{format_date date_created}}</span></p>
+      </div>
+    </div>
 
-<h2 class="ui huge header left aligned">{{title}}</h2>
-<h2 class="ui header"> {{user.user_name}}</h2>
-<p class="section_title">created on: <span class="user_text">{{format_date date_created}}</span></p>
-      
-<div class="item">
-  <a href="/editproject/{{id}}" class="ui is-dark submit button mt-2" id="edit">Edit Project</a>   
-  <div class="ui is-dark submit button mt-2" data-id="{{id}}" id="delete">Delete Project</div>
-</div> 
-{{!-- <div class="ui orange submit button is-fullwidth mt-2" data-id="{{id}}" id="collaborate">WRK with</div>     --}}
+    <div class="item is-flex is-justify-content-center">
+      <a href="/editproject/{{id}}" class="ui orange submit button is-fullwidth mt-2" id="edit">Edit Project</a>
+      <div class="ui is-dark submit button is-fullwidth mt-2" data-id="{{id}}" id="delete">Delete Project</div>
+    </div>
+    {{!-- <div class="ui orange submit button is-fullwidth mt-2" data-id="{{id}}" id="collaborate">WRK with</div> --}}
+
+  </div>
 
 
-</div>    
 </section>
 
-  
+
 <h2 class="ui horizontal divider header">
   <i class="fas fa-tasks"></i>
   &nbsp Project details
@@ -32,9 +38,9 @@
 
 
 
-<section class="section is-small is-flex is-justify-content-center">
-<P>{{details}}</P>
-<P> technology used: {{tech}}</P>
+<section class="section is-small  detailsSection">
+  <P>{{details}}</P>
+  <P> technology used: {{tech}}</P>
 </section>
 
 
@@ -46,15 +52,25 @@
 
 <section class="section is-small">
 
-<div class="row gridBox">
   {{#each collabs as |collab|}}
-  {{!-- <P> name:{{collab.user.user_name}}</P>
-  <img src="/assets/avatars/{{collab.user.avatar}}" --}}
-  
-  <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
-  <span>{{collab.user.user_name}}</span>
+  <div class="ui big horizontal divided list">
+    <div class="item">
+
+      {{#if avatar}}
+      <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
+      {{else}}
+      <img class="ui avatar image" id="avatar" src="/assets/profiles/joe/jpg">
+      {{/if}}
+
+      <div class="content">
+        <div class="header">{{collab.user.user_name}}</div>
+      </div>
+
+    </div>
+  </div>
   {{/each}}
-</div>
+
 </section>
 
 <script src="/js/myproject.js"></script>
+<script src="/js/randomProfile.js"></script>

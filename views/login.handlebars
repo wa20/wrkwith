@@ -1,37 +1,34 @@
-
 {{>loggedOutMiniHero}}
 {{!-- page template top half end --}}
 
 
 <section class="section is-medium">
- 
- <div class="ui attached inverted message box">
-  <div class="header orange">
-    Login Below
+
+  <div class="ui attached inverted message box">
+    <div class="header orange">
+      Login Below
+    </div>
+    {{!-- <p>Fill out the form below to sign-up for a new account</p> --}}
   </div>
-  {{!-- <p>Fill out the form below to sign-up for a new account</p> --}}
-</div>
-<form class="ui form attached fluid segment">
-  <div class="field">
-    <label>Username</label>
-    <input placeholder="Username" type="text" id="loginUsername">
-  </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password" placeholder="********" id="loginPassword">
-  </div>
-  <div class="ui red submit button" id="loginUser">Login</div>
-  <a class="ui grey submit button" href="/signup">Create Account</a>
-</form>
-{{!-- <div class="ui bottom attached warning message">
-  <i class="icon help"></i>
-  Already signed up? <a href="#">Login here</a> instead.
-</div> --}}
-  
+  <form class="ui form attached fluid segment">
+    <div class="field">
+      <label>Username</label>
+      <input placeholder="Username" type="text" id="loginUsername">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" placeholder="********" id="loginPassword">
+    </div>
+    <div class="ui red submit button" id="loginUser">Login</div>
+    <a class="ui grey submit button" href="/signup">Create Account</a>
+  </form>
+  {{!-- <div class="ui bottom attached warning message">
+    <i class="icon help"></i>
+    Already signed up? <a href="#">Login here</a> instead.
+  </div> --}}
+
 </section>
 
- <script src="../js/login.js"></script>
+<script src="/js/login.js"></script>
 
 {{!-- page template base end --}}
-
-  
