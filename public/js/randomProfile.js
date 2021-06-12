@@ -21,7 +21,7 @@ window.onload = function() {
     
     let random = Math.floor(Math.random() * avatars.length);
   
-    document.getElementById("avatar").src = `/assets/profiles/${avatars[random]}.jpg`;
+    document.getElementById("avatar").src=`/assets/profiles/${avatars[random]}.jpg`;
   };
 
   
