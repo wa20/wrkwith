@@ -1,4 +1,8 @@
+{{#if logged_in}}
+{{>loggedIn}}
+{{else}}
 {{>loggedOut}}
+{{/if}}
 {{!-- page template top half end --}}
 <link rel="stylesheet" href="/assets/css/homepage.css">
 <section class="section is-medium section-2">

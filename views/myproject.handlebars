@@ -5,7 +5,7 @@
   
 <div class="profileContainer">
     <div class="image spacing">
-      {{#if avatar}}
+      {{#if user.avatar}}
       <img src="/assets/avatars/{{user.avatar}}" class="ui rounded image">
       {{else}} 
       <img class="ui small rounded image" id="avatar" src="">
@@ -14,7 +14,7 @@
 
     <div class="content spacing">
     <h3 class="ui huge header left aligned">{{title}}</h3>
-    <h3 class="ui header">Username: {{user.user_name}}</h3>
+    <h3 class="ui header">Owner: {{user.user_name}}</h3>
     <p class="section_title">Created On: <span class="user_text">{{format_date date_created}}</span></p>
     </div> 
 </div>
