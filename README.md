@@ -30,7 +30,9 @@
 
 ## WrkWith 
 With WorkWith you can easily find collaborator for your ideas, your project, and make them become real!!! The portal is free and open to everyone. You only need to sign up!
+
 <div id="tech">
+
 ## What technology has been used 
 
 * HTML
@@ -42,6 +44,7 @@ With WorkWith you can easily find collaborator for your ideas, your project, and
 * Sequelize
 * Express Handlebars
 * Heroku
+
 <div id="depend">
 
 ## NPM Dependencies
@@ -70,6 +73,7 @@ Run npm install in the terminal/command line:
 * Semantic UI
 
 _Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML._
+
 <div id="wire">
 
 ## Wireframe
@@ -84,7 +88,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Clone the WrkWith repository and then create a MySQL database called wrkwith_db
 Run node server.js (starts the server, creates the tables in wrkwith_db)
-* Visit localhost:3006
+Visit localhost:3006
 
 ## Links
 
@@ -93,6 +97,7 @@ Run node server.js (starts the server, creates the tables in wrkwith_db)
 
 
 <div id="Screenshots">
+
 ## Screenshots
 
 
@@ -108,6 +113,7 @@ Run node server.js (starts the server, creates the tables in wrkwith_db)
 
 
 <div id="Licence">
+
 ## Licence
 
 
@@ -135,6 +141,7 @@ SOFTWARE_
 
 
 <div id="Collaborator">
+
 ## Collaborator
 
 * Wael - <a href="https://github.com/wa20"> Github </a>
@@ -143,10 +150,15 @@ SOFTWARE_
 * Bipin - <a href="https://github.com/"> Github </a>
 
 <div id="Badge">
+
 ## Badge
+
 ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
+
 ![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)
+
 ![Website monip.org](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)
+
 ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
 
