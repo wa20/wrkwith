@@ -52,15 +52,24 @@
 
 <section class="section is-small">
 
-<div class="row gridBox">
-  {{#each collabs as |collab|}}
-  {{!-- <P> name:{{collab.user.user_name}}</P>
-  <img src="/assets/avatars/{{collab.user.avatar}}" --}}
-  
-  <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
-  <span>{{collab.user.user_name}}</span>
-  {{/each}}
-</div>
+ {{#each collabs as |collab|}}
+  <div class="ui big horizontal divided list">
+    <div class="item">
+   
+      {{#if avatar}}
+      <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
+      {{else}} 
+        <img class="ui avatar image" id="avatar" src="/assets/profiles/ade/jpg">
+      {{/if}}
+      
+      <div class="content">
+        <div class="header">{{collab.user.user_name}}</div>
+      </div>
+    
+    </div>
+  </div>
+ {{/each}}
+
 </section>
 
 <script src="/js/myproject.js"></script>
