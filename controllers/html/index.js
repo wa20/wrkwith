@@ -25,7 +25,7 @@ router.use("/profile-edit", editProfileRoute);
 router.use("/profile-image", editProfileImageRoute);
 router.use("/project",oneProject);
 router.use("/projects",allProjects);
-router.use("/homepage",homeRoute);
+router.use("/",homeRoute);
 router.use("/signup", signupRoute);
 router.use("/login" , loginRoute);
 router.use("/newproject", newprojectroute)
