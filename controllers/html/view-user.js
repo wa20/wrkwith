@@ -10,16 +10,19 @@ router.get("/:id", withAuth, async (req, res) => {
     const userData = await User.findOne({
       where: { id: req.params.id },
       include: [
-        { 
-          model: Project, attributes: ["title", "date_created", "id"], 
-          include: {model: User, attributes: ["user_name"]}
+        {
+          model: Project,
+          attributes: ["title", "date_created", "id"],
+          include: { model: User, attributes: ["user_name"] },
         },
         {
           model: Collab,
-          include: { model: Project, attributes: ["title", "date_created", "id"],
-          include:{model: User, attributes: ["user_name"] }},
+          include: {
+            model: Project,
+            attributes: ["title", "date_created", "id"],
+            include: { model: User, attributes: ["user_name"] },
+          },
         },
-        
       ],
     });
 
