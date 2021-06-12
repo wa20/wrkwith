@@ -1,5 +1,3 @@
-
-
 {{>loggedIn}}
 
 
@@ -9,84 +7,51 @@
   &nbsp wrkwith Community
 </h2>
 
-<section class="section is-medium gridBox">
-  
-{{#each users as |user|}}
-  {{!-- <div class="ui link cards">
-    
+<section class="section is-medium gridBox2">
+
+  {{#each users as |user|}}
+
+  <div class="ui special cards">
+
     <div class="card">
-      <div class="image">
-        {{#if avatar}}
-        <img  src="/assets/avatars/{{avatar}}">
-        {{else}} 
-        <img  src="/assets/avatars/avatar1.jpg">
-        {{/if}} 
-     </div>
+      <div class="blurring dimmable image">
+        <div class="ui dimmer" id="dimm-el">
+          <div class="content">
+            <div class="center">
 
-      <div class="content">
-        <div class="header">{{user_name}}</div>
-        <div class="meta">
-          <p> {{first_name}} {{last_name}}</p> 
-        </div>
-        <div class="description">
-          <P>{{bio}}</P>
-        </div>
-      </div> --}}
+              <a href="/view-user/{{id}}" class="ui inverted button">View User</a>
 
-      {{!-- <div class="extra content">
-        <span class="right floated">
-        <a href="/api/user/{{id}}"><button class="ui inverted red button">View Profile</button></a>
-        </span>
-      </div>
-      
-    </div>
-  </div> --}}
-
-
-<div class="ui special cards">
-  
-  <div class="card">
-    <div class="blurring dimmable image">
-      <div class="ui dimmer" id="dimm-el">
-        <div class="content">
-          <div class="center">
-            <a href="/view-user/{{id}}" class="ui inverted button">Add Friend</a>
+            </div>
           </div>
         </div>
+        <div class="image">
+          {{#if avatar}}
+          <img src="/assets/avatars/{{avatar}}">
+          {{else}}
+          <img id="avatar" src="/assets/profiles/joe.jpg">
+          {{/if}}
+        </div>
+        {{!-- <img src="/images/avatar/large/elliot.jpg"> --}}
       </div>
-      <div class="image">
-        {{#if avatar}}
-        <img  src="/assets/avatars/{{avatar}}">
-        {{else}} 
-        <img  src="/assets/avatars/avatar1.jpg">
-        {{/if}} 
-     </div> 
-      {{!-- <img src="/images/avatar/large/elliot.jpg"> --}}
-    </div>
-    <div class="content">
-      <a href="/view-user/{{id}}" class="header">{{user_name}}</a>
-      <div class="meta">
-        <span class="date">Joined On: {{format_date date_joined}}</span>
+      <div class="content">
+        <a href="/view-user/{{id}}" class="header">{{user_name}}</a>
+        <div class="meta">
+          <span class="date">Joined On: {{format_date date_joined}}</span>
+        </div>
       </div>
-    </div>
-    <div class="extra content">
-      <p>{{bio}}</p>
+      <div class="extra content">
+        <p>{{bio}}</p>
+      </div>
     </div>
   </div>
-</div>
 
 
 
-
-
-
-
-
-{{/each}}
+  {{/each}}
 
 
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      
-<script src="/js/index.js"></script>
+
+
+<script src="/js/dimmer.js"></script>
