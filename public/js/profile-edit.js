@@ -41,7 +41,7 @@ console.log(submitChange)
 
 if (submitChange.ok) {
     //redirect to profile
-    document.location.replace("/html/login")
+    document.location.replace("/profile")
   } else {
     alert("Update Failed");
   }

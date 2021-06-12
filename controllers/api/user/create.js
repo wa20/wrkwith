@@ -11,6 +11,7 @@ router.post("/signup", async (req, res) => {
       password: req.body.password,
       first_name: req.body.firstName,
       last_name: req.body.lastName,
+      avatar: req.body.avatar,
     });
     res.json(newuser);
   } catch (err) {

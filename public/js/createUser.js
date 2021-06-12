@@ -3,6 +3,27 @@ const signUP = document.getElementById('creatAccount');
 signUP.addEventListener("click", async (event) => {
 
   event.preventDefault();
+//assign random profile image
+
+var avatars = [
+  "elliot",
+  "jenny",
+  "joe",
+  "aura",
+  "steve",
+  "adi",
+  "chris",
+  "christian",
+  "becky",
+  "matthew",
+  "molly",
+  "elyse",
+
+];
+
+let random = Math.floor(Math.random() * avatars.length);
+
+const profileImage =  `/assets/profiles/${avatars[random]}.jpg`;
 
   //check passwords match
   const PWMain = document.getElementById('PWMain').value.trim();
@@ -26,6 +47,7 @@ signUP.addEventListener("click", async (event) => {
       email: emailVal,
       userName: userNameVal,
       password: PWMain,
+      avatar: profileImage,
     }),
     headers: { "Content-Type": "application/json" },
   });
@@ -33,7 +55,7 @@ signUP.addEventListener("click", async (event) => {
   if (submitNewUser.ok) {
     //redirect to profile
 
-    document.location.replace("/login")
+    document.location.replace("/profile")
 
   } else {
     alert("Sign Up Failed");
