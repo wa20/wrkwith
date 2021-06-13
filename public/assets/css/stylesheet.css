@@ -1,21 +1,20 @@
-:root{
---color1: ;
---color2: ;
+:root {
+  --color1: ;
+  --color2: ;
 }
 
-
 * {
-    /* all:unset; */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-  }
+  /* all:unset; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
 
 ol,
 ul {
   list-style: none;
-}  
+}
 
 html.ios {
   overflow-x: hidden;
@@ -36,8 +35,6 @@ html.ios body {
 
 } */
 
-
-
 /* ==============================================
 -  Header
 ============================================== */
@@ -47,77 +44,79 @@ html.ios body {
     z-index: 2;
   } */
 
-
-  /* .navbar-brand{
+/* .navbar-brand{
     position: fixed;
     top: 0;
     z-index: 2;
   } */
-  
-  .navbar-item{
-    font-size: 1.5rem;
-  }
-  
-  .hero-body{
-    background-image: url("../../img/cover.png");
-    background-position:top;
-    background-size:cover;
-    margin-top: 70px;
-    
-    
-  }
 
-  .sticky{
-    position: fixed;
-    top: 0;
-  }
+.navbar-item {
+  font-size: 1.5rem;
+}
 
-  /* ==============================================
--  Body
-============================================== */ 
+.hero-body {
+  background-image: url("../../img/cover-s.png");
+  background-position: top;
+  background-size: cover;
+  margin-top: 60px;
+}
 
-
-  /* .navbar{
-    background:rgb(46, 45, 45) !important;
-    transition: 0.5s ease-in;
-    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
-  } */
-
-  /* .navbar-scrolled{
-    background: transparent !important;
-    transition: 0.5s ease-in;
-  } */
-  
-  /* nav {
-    background: transparent !important;
-    transition: background-color 0.4s ease-out;
-  } */
-
-  .boxBox{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-  }
-
-  nav {
-    background:rgb(46, 45, 45) !important;
-    transition: 0.5s ease-in;
-    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
-  }
+.sticky {
+  position: fixed;
+  top: 0;
+}
 
 /* ==============================================
 -  Body
 ============================================== */
-.homePageContainer{
-display: flex;
-/* align-items: stretch;
-flex-direction: row; */
-width: 100vw;
+
+/* .navbar{
+    background:rgb(46, 45, 45) !important;
+    transition: 0.5s ease-in;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  } */
+
+/* .navbar-dark {
+  background: url("../Background-symbols.jpg") !important;
+  background-size: 150px;
+  transition: 0.5s ease-in;
+  box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  z-index: 2;
+} */
+
+.nav-transparent {
+  background: transparent !important;
+  transition: background-color 0.5s ease-out;
 }
 
+.boxBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.signupbox, .loginbox{
+nav {
+   background: rgb(22, 22, 22) !important;
+  
+  /* background-position: center; */
+  background-size: 150px;
+  transition: 0.5s ease-in;
+  box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+ 
+   } 
+
+/* ==============================================
+-  Body
+============================================== */
+.homePageContainer {
+  display: flex;
+  /* align-items: stretch;
+flex-direction: row; */
+  width: 100vw;
+}
+
+.signupbox,
+.loginbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,7 +127,7 @@ width: 100vw;
 -  profile page grid
 ============================================== */
 
-.gridBox{
+.gridBox {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -138,7 +137,7 @@ width: 100vw;
   overflow: auto;
 }
 
-.gridBox2{
+.gridBox2 {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -148,16 +147,14 @@ width: 100vw;
   overflow: auto;
 }
 
-
-.profileContainer{
+.profileContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
- 
 }
 
-.spacing{
+.spacing {
   padding: 1rem;
 }
 
@@ -165,7 +162,7 @@ width: 100vw;
 -  project pages grid
 ============================================== */
 
-.projecstGridBox{
+.projecstGridBox {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -175,20 +172,18 @@ width: 100vw;
   overflow: auto;
 }
 
-.detailsSection{
+.detailsSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
-
 /* ==============================================
 -  image upload page
 ============================================== */
 
-.uploadImage{
+.uploadImage {
   display: flex;
   justify-items: center;
   align-items: center;
@@ -197,7 +192,7 @@ width: 100vw;
   border-radius: 5px;
 }
 
-.chooseFileBtn{
+.chooseFileBtn {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -205,48 +200,95 @@ width: 100vw;
   padding-left: 8rem;
 }
 
-
-.myProjectBtn{
-  
+.myProjectBtn {
   margin: 2rem;
 }
 /* ==============================================
 -  Boxs
 ============================================== */
 
+.signUP {
+  width: 70vw;
+  box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+}
 
-  .signUP{
-    
-    width: 70vw;
-    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+.logIn {
+  width: 70vw;
+  box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+}
+
+/* ==============================================
+-  Homepage
+============================================== */
+
+@media (min-width: 765px) {
+  .section-1 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .logIn{
-    width: 70vw;
-    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  .section-2 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  .section-3 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 
-  
-  /* ==============================================
+@media (max-width: 765px) {
+  .section-1 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .section-2 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .section-3 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.homepageBox{
+  box-shadow: 10px 0px 15px 2px rgba(0, 0, 0, 0.108)
+}
+
+/* ==============================================
 -  Footer
 ============================================== */
-.footer{
+.footer {
   position: relative;
   bottom: 0;
 }
 
-#with{
+#with {
   font-style: italic;
   color: coral;
 }
 
-
-.user_text{
+.user_text {
   font-style: italic;
 }
 
-.section_title{
+.section_title {
   font-size: 1.5rem;
 }
