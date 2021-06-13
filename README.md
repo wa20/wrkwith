@@ -93,7 +93,7 @@ Visit localhost:3006
 ## Links
 
 * [Code Repository](https://github.com/wa20/wrkwith-app)
-* [Live website](https://wrkwith-app.herokuapp.com/homepage)
+* [Live website](https://wrkwith-app.herokuapp.com/)
 
 
 <div id="Screenshots">
